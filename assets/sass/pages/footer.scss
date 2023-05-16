@@ -1,0 +1,149 @@
+@import "../common/mixin";
+
+footer {   
+    .footer-wrapper {
+        background: $white_color;
+        padding: 50px 0 20px;
+        .title {
+            font-weight: 600;
+            color: $site_tertiary_color;
+        }
+    } 
+    .row {
+        @include row;        
+        @include space-between;
+        .d-col {
+            padding: 0 10px;
+        }
+
+        .company{
+            @include flexColumn;
+            width: 100%;
+            margin-bottom: 20px;
+            @media only screen and (min-width: $device-lg) {
+                width: 27%;
+                margin-bottom: 0;
+            }
+            p {
+                font-weight: 500;
+                max-width: 300px;
+                margin: 0 auto;
+                @include text-center;
+                @media only screen and (min-width: $device-lg) {
+                    margin: unset;
+                    text-align: unset;
+                }
+            }
+        }
+        .Links-wrapper {
+            @include space-between;
+            @include flexbox;
+            width: 100%;
+            margin-bottom: 20px;
+            @media only screen and (min-width: $device-md) {
+                width: 65%;
+                margin-bottom: 0;
+            }
+            @media only screen and (min-width: $device-lg) {                
+                width: 40%;
+            }
+            li {
+                padding: 0 0 5px;
+                text-transform: capitalize;
+            }
+        }
+        .location {
+            @include flexColumn;
+            width: 100%;            
+            @media only screen and (min-width: $device-md) {
+                width: 30%;
+            }
+            @media only screen and (min-width: $device-lg) {
+                width: 25%;
+                padding-left: 50px;
+            }
+            p {
+                @include flexbox;
+                align-items: baseline;
+                margin-bottom: 10px;
+                i {
+                    margin-right: 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .other-products .title {       
+        visibility: hidden;    
+        display: block;        
+    }
+
+    .footer-logo {
+        max-width: 200px;
+        margin: 0 auto 20px;
+        @media only screen and (min-width: $device-lg) {
+            margin: 0 0 20px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .social-link {
+        @include flexbox;
+        @include align-item-center;
+        margin-bottom: 20px;
+        @include just-center;
+        @media only screen and (min-width: $device-md) {
+            @include just-end;
+            margin-bottom: 10px;
+        }
+        a {
+            font-size: 17px;
+            margin-right: 10px;
+            color: #6A6B6B;
+            &:last-child {
+                margin-right: 0;
+            }
+            li:hover {
+                background-color: $site_tertiary_color;
+            }
+           &:hover{
+               color: $site_secondary_color;
+           }
+        }
+        li {
+            width: 30px;            
+            height: 30px;
+            border: 1px solid #6A6B6B;
+            @include border-radius(50%);
+            display: block;
+            @include text-center;
+            padding-top: 2px;            
+        }
+    }
+
+    .copyright-wrapper {
+        @include flexbox;
+        @include just-center;
+        @include flexColumn;
+        @include align-item-center;
+        @include text-center;
+        padding: 15px 0;
+        font-size: 10px;
+        @media only screen and (min-width: $device-md) {
+            text-align: unset;
+            flex-direction: row;
+            @include space-between;
+        }
+        footer .copyright-wrapper div {
+            margin-bottom: 10px; 
+            @media only screen and (min-width: $device-md) {
+                margin-bottom: 0; 
+            }
+            &:last-child {
+                margin-bottom: 0; 
+            }
+        }
+    }
+}

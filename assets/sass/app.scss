@@ -1,0 +1,120 @@
+@import "../../assets/sass/common/mixin"; 
+
+*,
+*::before,
+*::after {
+    @include box(border-box);
+}
+::selection {
+    color: $white_color;
+    background: $site_secondary_color;
+}
+body {
+    @include body-font-style;
+    @include body-fonts;  
+    @include space-none;
+    background: #F7F8F8;
+}
+
+main,
+section {
+    display: block;
+}
+
+
+input,
+textarea,
+table {
+    @include body-font-style;
+    font-weight: 500;
+}
+img {
+    @include img-common;
+}
+
+img,
+a,
+p {
+    @include space-none;
+}
+
+h1, .h1{
+    @include h1;
+}
+
+h2, .h2{
+    @include h2;
+}
+
+h3, .h3{
+    @include h3;
+}
+
+h4, .h4{
+    @include h4;
+}
+
+h5, .h5{
+    @include h5;
+}
+
+h6, .h6{
+    @include h6;
+}
+
+ul,
+li {
+    @include order-unoderlist;
+}
+
+a {
+    @include anchor-link-common;
+}
+
+main {
+    @include main;
+}
+
+section {
+    @include section;
+}
+
+p {
+    @include p;
+}
+
+.btn {
+    @include button;  
+    &.btn-primary {
+        @include btn-primary;
+    } 
+    &.btn-medium {
+        @include btn-medium;
+    }
+    &.btn-small {
+        @include btn-small;
+    }
+}
+
+section {
+    section {
+        padding: 0;
+    }
+}
+
+.page-wrapper {
+    @include flexbox;
+    @include flexColumn;
+}
+.wrapper {
+    // margin-top: 110px;    
+    // @media only screen and (min-width: $device-md) {
+        margin-top: 88px;
+    // }
+}
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
