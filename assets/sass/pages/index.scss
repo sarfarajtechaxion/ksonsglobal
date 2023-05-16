@@ -1,0 +1,430 @@
+@import "../common/mixin";
+
+/******** Banner Section ********/
+.banner {    
+    background: $site_primary_color;
+    height: 600px;
+    padding: 0;
+    @media only screen and (min-width: $device-md) {        
+        height: 420px;
+    }
+    @media only screen and (min-width: $device-lg) {
+        height: 550px;
+    }
+    .banner-wrapper {
+        @include flexbox;
+        @include space-between;        
+        flex-direction: column-reverse;
+        @include align-item-center;
+        @media only screen and (min-width: $device-md) {
+            @include flexrow;
+        }
+        .banner-content {
+            @media only screen and (min-width: $device-md) {
+                max-width: 550px;
+            }
+        }
+        h1 {
+            color: $white_color;
+            margin: 0 0 20px;
+            text-align: center;
+            @media only screen and (min-width: $device-md) {
+                margin: 0 0 30px;
+                text-align: left;
+            }
+        }
+        h3 {
+            color: $white_color;
+            font-weight: 400;
+            margin: 0 0 20px;
+            text-align: center;
+            @media only screen and (min-width: $device-md) {
+                margin: 0 0 40px;
+                text-align: left;
+            }
+        }
+
+        .btn {
+            background: $site_secondary_color;
+            color: $site_primary_color;
+            text-transform: capitalize;
+            margin: 0 auto;
+            @media only screen and (min-width: $device-md) {
+                margin: unset;
+            }
+            &:hover {
+                border: 1px solid $site_secondary_color;
+                background: transparent;
+                color: $site_secondary_color;
+            }
+        }
+
+        .banner-image {
+            position: relative;            
+    
+            img {
+                max-width: 350px;
+                margin-bottom: 30px;
+                @media only screen and (min-width: $device-md) {
+                    max-width: 480px;
+                    margin: 0;
+                }
+                
+            }
+        }
+    }
+}
+
+/******** Our Product Section ********/
+.our-product {
+    margin-top: 0;
+    padding: 30px 0;
+    @media only screen and (min-width: $device-md) {
+        padding: 40px 0 50px;
+    }
+    @media only screen and (min-width: $device-lg) {
+        padding-top: 0;
+        margin-top: -130px;
+    }
+    .our-product-wrapper {
+        position: relative;
+    }
+    .slick-arrow {
+        background: url(../../images/home/arrow.svg) no-repeat;
+        width: 48px;
+        height: 38px;
+        display: inline-block;
+    }
+    .product-list {
+        @include flexbox;
+        flex-wrap: wrap;
+        
+        max-width: 100%;
+        position: unset;
+        @media only screen and (min-width: $device-md) {
+            max-width: 650px;
+            margin: 0 -10px;
+        }
+        li {
+            padding:  0 10px;
+            width: 33.33%;
+        }
+        .image {
+            position: relative;
+            padding: 40% 50%;  
+            @media only screen and (min-width: $device-md) {
+                padding: 60% 40%;  
+            }          
+            .blog-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                background: rgba(0,0,0,0.5);                
+                padding: 10px;
+                color: $white_color;
+            }
+            img {
+                position: absolute;
+                inset: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;                
+            }
+        }        
+    }
+    .slick-arrow {
+        background: url(../../images/home/arrow.svg) no-repeat;
+        width: 48px;
+        height: 38px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 60%;
+        cursor: pointer;
+        @media only screen and (min-width: $device-md) {
+            top: 40%;
+        }
+        @media only screen and (min-width: $device-lg) {
+            right: 120px;
+            top: 60%;
+        }
+    }
+    .arrow-left.slick-arrow {
+        right: 60px;
+        transform: rotate(180deg);
+        @media only screen and (min-width: $device-lg) {
+            right: 220px;
+        }
+    }
+}
+
+/******** About us Section ********/
+.about-us {
+    background: #fff;
+    margin: 0;   
+    .about-us-wrapper {
+        @include flexbox;
+        @include align-item-center;
+        flex-direction: column-reverse;
+        @media only screen and (min-width: $device-md) {
+            @include flexrow;
+            @include space-between;
+        }
+        .content {
+            padding: 20px 0;
+            max-width: 710px;
+            @media only screen and (min-width: $device-md) {
+                padding: 0 20px 0 0;
+                max-width: 410px;
+            }
+            @media only screen and (min-width: $device-lg) {
+                max-width: 610px;
+            }
+            @media only screen and (min-width: $device-xl) {                
+                max-width: 710px;
+            }
+            h3 {
+                font-weight: 900;
+                margin: 0 0 20px;
+                color: $site_primary_color;
+            }
+        }
+        .video {
+            position: relative;            
+            margin-top: 25px;
+            margin-top: 0;
+            width: 100%;
+            @media only screen and (min-width: $device-md) {
+                width: calc(100% - 440px);
+            }
+            @media only screen and (min-width: $device-lg) {                
+                width: calc(100% - 650px);
+            }
+            @media only screen and (min-width: $device-xl) {
+                width: calc(100% - 750px);
+            }
+            iframe {
+                height: 180px;                
+                @media only screen and (min-width: $device-md) {
+                    height: 300px;
+                }
+            }
+        }     
+    }
+}
+
+/******** Our Service Section ********/
+.our-service-wrapper {
+    max-width: 780px;
+    margin: 0 auto 20px;
+    text-align: center;
+    h3 {
+        font-weight: 900;
+        margin: 0 0 20px;
+        color: $site_primary_color;
+        text-align: center;
+    }    
+}
+.services-list {
+    @include flex-center;        
+    text-align: center;
+    flex-wrap: wrap;
+    li {
+        width: 50%;
+        margin-bottom: 25px;
+        @media only screen and (min-width: $device-lg) {
+            width: 33.33%;
+        }
+        @media only screen and (min-width: $device-lg) {
+            width: 25%;
+            margin-bottom: 0;
+        }
+    }
+    img {
+        width: 140px;
+        margin: 0 auto 10px;
+        text-align: center;
+        display: block;
+    }
+    h5 {
+        margin: 0;
+    }
+}
+
+/******** Testimonial Section ********/
+.testimonial {
+    padding: 0;      
+    overflow: hidden;
+    .container {
+        @media only screen and (min-width: $device-lg) {
+            padding: 50px 0;
+        }
+    }
+    .testimonial-wrapper {
+        @include flexbox;
+        @include align-item-center;
+        flex-direction: column;
+        position: relative;
+        @media only screen and (min-width: $device-lg) {
+            @include flexrow;
+            @include space-between;
+        }        
+        &:after {
+            @media only screen and (min-width: $device-lg) {
+                content: '';
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                position: absolute;
+                right: -100%;
+                background: $site_primary_color;
+            }
+        }
+        .content {            
+            color: $white_color; 
+            @include text-center;
+            background: $site_primary_color; 
+
+            max-width: 100;
+            padding: 30px 15px;
+            margin-left: auto;
+            width: 100%;     
+            @media only screen and (min-width: $device-md) {
+                text-align: unset;                
+            }
+            @media only screen and (min-width: $device-lg) {
+                
+                max-width: 845px;
+                padding: 30px 40px 30px 250px;
+            }     
+            @media only screen and (min-width: $device-xl) {
+                max-width: 1000px;
+                padding: 30px 40px 30px 330px;
+            }
+            h3 {
+                font-weight: 900;
+                margin: 0 0 10px;
+                color: $white_color;
+                @include text-center;
+                @media only screen and (min-width: $device-lg) {
+                    text-align: unset;                
+                }
+            }
+            .subtitle {
+                font-weight: normal;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                @include text-center;
+                @media only screen and (min-width: $device-lg) {
+                    text-align: unset;                
+                }
+            }
+            a {
+                color: $site_secondary_color;
+                &:hover {
+                    color: $white_color;
+                }
+            }
+        }
+        .testimonial-image {
+            position: relative;
+            padding: 25% 30%;
+            margin-bottom: 20px;
+            @media only screen and (min-width: $device-sm) {
+                padding: 20% 25%;
+            }
+            @media only screen and (min-width: $device-md) {
+                padding: 21% 24%;                
+            }
+            @media only screen and (min-width: $device-lg) {
+                margin-bottom: 0;                
+                padding: 19% 20%;                
+                position: absolute;
+                left: 15px;
+            }
+            @media only screen and (min-width: $device-xl) {
+                padding: 15% 17%;
+            }
+            img {
+                position: absolute;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                @include border-radius(25px);
+            }
+        }     
+    }    
+}
+
+/******** Our Blog Section ********/
+.our-blog {
+    @media only screen and (min-width: $device-md) {
+        padding: 0;
+    }    
+    h3 {
+        font-weight: 900;
+        margin: 0 0 20px;
+        color: $site_primary_color;
+        text-align: center;
+        @media only screen and (min-width: $device-md) {
+            margin: 0 0 40px;
+        }
+    } 
+    .blog-list {
+        @include flexbox;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+        li {
+            padding:  0 10px;
+            width: 33.33%;          
+        }
+        .image {
+            position: relative;
+            padding: 35% 50%;
+            margin-bottom: 10px;
+            .blog-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                background: rgba(0,0,0,0.5);
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                padding: 10px;
+                color: $white_color;
+            }
+            img {
+                position: absolute;
+                inset: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                @include border-radius(25px);
+            }
+        }
+        p {
+            font-weight: 500;
+        }    
+    }
+
+    .view-all {
+        margin-top: 20px;
+        @media only screen and (min-width: $device-md) {
+            margin-top: 50px;
+        }
+        a {
+            margin: 0 auto;
+            background: $site_primary_color;
+            color: $white_color;
+            text-transform: unset;
+            &:hover {
+                background: $site_secondary_color;
+                color: $site_primary_color;
+            }
+        }
+    }
+}

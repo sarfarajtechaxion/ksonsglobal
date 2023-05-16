@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+h3 {
+  margin: 0 0 20px;
+  font-weight: 900;
+  color: #18352D;
+  text-transform: uppercase;
+}
+
+/******** Banner Section ********/
+.banner {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.banner .banner-image {
+  position: relative;
+  padding: 20% 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .banner .banner-image {
+    padding: 14% 50%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner .banner-image {
+    padding: 9.841% 50%;
+  }
+}
+
+.banner .banner-image img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+.banner .page-titile {
+  position: absolute;
+  inset: 0;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(24, 53, 45, 0.66);
+}
+
+.banner .page-titile h1 {
+  margin: 0;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/******** Breadcrumbs Section ********/
+.breadcrumbs {
+  clear: both;
+  padding: 10px 0;
+  background: #FFFFFF;
+}
+
+.breadcrumbs ul {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: capitalize;
+}
+
+.breadcrumbs ul li {
+  margin-right: 10px;
+}
+
+.breadcrumbs ul li a {
+  padding-right: 15px;
+  position: relative;
+  font-weight: 600;
+}
+
+.breadcrumbs ul li a::after {
+  content: '/';
+  position: absolute;
+  right: 0;
+}
+
+/******** Contact List Section ********/
+.contact {
+  margin: 0;
+  background: #FFFFFF;
+}
+
+.contact .contact-wrapper .contact-list {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 350px;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact .contact-wrapper .contact-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 950px;
+  }
+}
+
+.contact .contact-wrapper .contact-list li {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact .contact-wrapper .contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact .contact-wrapper .contact-list li {
+    margin-bottom: 0;
+  }
+}
+
+.contact .contact-wrapper .contact-list li .image {
+  width: 50px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contact .contact-wrapper .contact-list li .image {
+    width: 75px;
+  }
+}
+
+.contact .contact-wrapper .contact-list li .details {
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.contact .contact-wrapper .contact-list li .details .title {
+  margin-bottom: 10px;
+}
+
+.contact .contact-wrapper .contact-list li .details p {
+  font-weight: 700;
+}
+
+/******** Get in Touch Section ********/
+.get-in-touch {
+  margin-bottom: 0;
+}
+
+.get-in-touch p {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch p {
+    margin-bottom: 50px;
+  }
+}
+
+.get-in-touch .form-wrapper {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+  .get-in-touch .form-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.get-in-touch .form-wrapper .image {
+  max-width: 350px;
+  margin: 0 auto 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .get-in-touch .form-wrapper .image {
+    max-width: 400px;
+    margin: unset;
+  }
+}
+
+.get-in-touch .form-wrapper .form {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch .form-wrapper .form {
+    width: calc(100% - 400px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .get-in-touch .form-wrapper .form {
+    width: calc(100% - 500px);
+  }
+}
+
+.get-in-touch .form-wrapper .form .icon {
+  width: 15px;
+  position: absolute;
+  top: 49%;
+  left: 0;
+  -webkit-transform: translate(90%, -60%);
+          transform: translate(90%, -60%);
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch .form-wrapper .form .icon {
+    width: 17px;
+    -webkit-transform: translate(100%, -60%);
+            transform: translate(100%, -60%);
+  }
+}
+
+.get-in-touch .form-wrapper .form .form-group {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.get-in-touch .form-wrapper .form .form-group.two {
+  width: calc(50% - 7px);
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch .form-wrapper .form .form-group.two {
+    width: calc(50% - 12px);
+    margin-right: 20px;
+  }
+}
+
+.get-in-touch .form-wrapper .form .form-group.two:nth-child(2) {
+  margin-right: 0;
+}
+
+.get-in-touch .form-wrapper .form .form-group input {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #18352D;
+  width: 100%;
+  padding: 0 10px 0 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch .form-wrapper .form .form-group input {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px 0 50px;
+  }
+}
+
+.get-in-touch .form-wrapper .form .form-group input:focus {
+  outline: none;
+}
+
+.get-in-touch .form-wrapper .form .form-group input.error {
+  border: 1px solid #8B0000;
+}
+
+.get-in-touch .form-wrapper .form .form-group textarea {
+  border: 1px solid #18352D;
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch .form-wrapper .form .form-group textarea {
+    padding: 10px 10px 10px 50px;
+  }
+}
+
+.get-in-touch .form-wrapper .form .form-group textarea.error {
+  border: 1px solid #8B0000;
+}
+
+.get-in-touch .form-wrapper .form .form-group textarea:focus {
+  outline: none;
+}
+
+.get-in-touch .form-wrapper .form .form-group button {
+  background: #18352D;
+  color: #FFFFFF;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .get-in-touch .form-wrapper .form .form-group button {
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+.get-in-touch .form-wrapper .form button {
+  width: 100%;
+  border-radius: 0;
+}
+
+/******** Global Reach Section ********/
+.global-reach {
+  margin: 0;
+}
+
+.global-reach .map-image {
+  margin-bottom: 20px;
+}
+
+.global-reach ul.country-list {
+  max-width: 260px;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  margin: 0 0 0 auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .global-reach ul.country-list {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .global-reach ul.country-list {
+    max-width: 650px;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .global-reach ul.country-list {
+    max-width: 700px;
+  }
+}
+
+.global-reach ul.country-list li {
+  margin-bottom: 5px;
+  list-style-type: circle;
+  color: #FFBE00;
+}
+
+.global-reach ul.country-list li a {
+  font-weight: 600;
+}
+/*# sourceMappingURL=contact.css.map */
