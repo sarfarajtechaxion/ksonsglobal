@@ -234,8 +234,27 @@
 
 /******** About us Section ********/
 .about-us {
-  background: #fff;
-  margin: 0;
+  padding: 0;
+}
+
+.about-us .container {
+  background: #FFFFFF;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us .container {
+    padding-right: 0;
+  }
+}
+
+.about-us .container:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  position: absolute;
+  left: -100%;
 }
 
 .about-us .about-us-wrapper {
@@ -271,7 +290,7 @@
 
 @media only screen and (min-width: 768px) {
   .about-us .about-us-wrapper .content {
-    padding: 0 20px 0 0;
+    padding: 50px 35px 40px 0;
     max-width: 410px;
   }
 }
@@ -288,6 +307,10 @@
   }
 }
 
+.about-us .about-us-wrapper .content a {
+  font-weight: 700;
+}
+
 .about-us .about-us-wrapper .content h3 {
   font-weight: 900;
   margin: 0 0 20px;
@@ -297,13 +320,16 @@
 .about-us .about-us-wrapper .video {
   position: relative;
   margin-top: 25px;
-  margin-top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 768px) {
   .about-us .about-us-wrapper .video {
     width: calc(100% - 440px);
+    position: absolute;
+    right: 15px;
+    margin-top: 0;
   }
 }
 
@@ -315,17 +341,31 @@
 
 @media only screen and (min-width: 1200px) {
   .about-us .about-us-wrapper .video {
-    width: calc(100% - 750px);
+    width: calc(100% - 760px);
+    right: 0;
   }
 }
 
-.about-us .about-us-wrapper .video iframe {
-  height: 180px;
+.about-us .about-us-wrapper .video a {
+  position: absolute;
+  right: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 9;
+  text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-  .about-us .about-us-wrapper .video iframe {
-    height: 300px;
+.about-us .about-us-wrapper .video a img {
+  position: relative;
+  width: 50px;
+  height: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-us .about-us-wrapper .video a img {
+    width: 100px;
   }
 }
 
@@ -341,6 +381,10 @@
   margin: 0 0 20px;
   color: #18352D;
   text-align: center;
+}
+
+.our-service-wrapper a {
+  font-weight: 700;
 }
 
 .services-list {
@@ -497,6 +541,7 @@
 
 .testimonial .testimonial-wrapper .content a {
   color: #FFBE00;
+  font-weight: 700;
 }
 
 .testimonial .testimonial-wrapper .content a:hover {
@@ -612,6 +657,10 @@
 
 .our-blog .blog-list p {
   font-weight: 500;
+}
+
+.our-blog .blog-list a {
+  font-weight: 700;
 }
 
 .our-blog .view-all {
