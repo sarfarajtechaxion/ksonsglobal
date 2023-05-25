@@ -3,14 +3,12 @@
 /******** Banner Section ********/
 .banner {    
     background: $site_primary_color;
-    height: 600px;
+    height: 500px;
     padding: 0;
     @media only screen and (min-width: $device-md) {        
-        height: 420px;
+        height: 350px;
     }
-    @media only screen and (min-width: $device-lg) {
-        height: 550px;
-    }
+    
     .banner-wrapper {
         @include flexbox;
         @include space-between;        
@@ -21,6 +19,9 @@
         }
         .banner-content {
             @media only screen and (min-width: $device-md) {
+                max-width: 450px;
+            }
+            @media only screen and (min-width: $device-lg) {
                 max-width: 550px;
             }
         }
@@ -63,10 +64,9 @@
             position: relative;            
     
             img {
-                max-width: 350px;
+                max-width: 300px;
                 margin-bottom: 30px;
                 @media only screen and (min-width: $device-md) {
-                    max-width: 480px;
                     margin: 0;
                 }
                 
@@ -83,8 +83,7 @@
         padding: 40px 0 50px;
     }
     @media only screen and (min-width: $device-lg) {
-        padding-top: 0;
-        margin-top: -130px;
+        padding-top: 0;        
     }
     .our-product-wrapper {
         position: relative;
@@ -98,13 +97,8 @@
     .product-list {
         @include flexbox;
         flex-wrap: wrap;
-        
         max-width: 100%;
-        position: unset;
-        @media only screen and (min-width: $device-md) {
-            max-width: 650px;
-            margin: 0 -10px;
-        }
+        position: unset;        
         li {
             padding:  0 10px;
             width: 33.33%;
@@ -136,27 +130,28 @@
     }
     .slick-arrow {
         background: url(../../images/home/arrow.svg) no-repeat;
-        width: 48px;
-        height: 38px;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
         display: inline-block;
-        position: absolute;
-        right: 0;
+        position: absolute;        
         top: 60%;
         cursor: pointer;
+        z-index: 1;
         @media only screen and (min-width: $device-md) {
             top: 40%;
         }
-        @media only screen and (min-width: $device-lg) {
-            right: 120px;
-            top: 60%;
+        @media only screen and (min-width: $device-lg) {            
+            top: 50%;
         }
     }
     .arrow-left.slick-arrow {
-        right: 60px;
-        transform: rotate(180deg);
-        @media only screen and (min-width: $device-lg) {
-            right: 220px;
-        }
+        left: -30px;
+        transform: rotate(180deg);        
+    }
+    .arrow-right.slick-arrow {        
+        right: -30px;
+        transform: rotate(360deg);        
     }
 }
 
@@ -194,7 +189,7 @@
                 max-width: 410px;
             }
             @media only screen and (min-width: $device-lg) {
-                max-width: 610px;
+                max-width: 560px;
             }
             @media only screen and (min-width: $device-xl) {                
                 max-width: 710px;
@@ -220,11 +215,12 @@
                 margin-top: 0;          
             }
             @media only screen and (min-width: $device-lg) {                
-                width: calc(100% - 650px);
+                width: calc(100% - 610px);
             }
             @media only screen and (min-width: $device-xl) {
                 width: calc(100% - 760px);
                 right: 0;
+                top: -35px;
             }
             a {
                 position: absolute;
@@ -243,22 +239,12 @@
                     }
                 }
             }
-            // iframe {
-            //     height: 180px;                
-            //     border-radius: 30px;
-            //     @media only screen and (min-width: $device-md) {
-            //         height: 250px;
-            //         border-radius: 40px;
-            //         width: 70%;
-            //         text-align: center;
-            //         display: block;
-            //         margin: 0 auto;
-            //     }
-            //     @media only screen and (min-width: $device-lg) {
-            //         height: 300px;
-            //         border-radius: 40px;
-            //     }
-            // }
+            img {
+                height: 300px;
+                @media only screen and (min-width: $device-lg) { 
+                    height: 400px;
+                }
+            }
         }     
     }
 }
@@ -346,8 +332,7 @@
                 text-align: unset;                
             }
             @media only screen and (min-width: $device-lg) {
-                
-                max-width: 845px;
+                max-width: 810px;
                 padding: 30px 40px 30px 250px;
             }     
             @media only screen and (min-width: $device-xl) {
@@ -382,7 +367,7 @@
         }
         .testimonial-image {
             position: relative;
-            padding: 25% 30%;
+            padding: 30%;
             margin-bottom: 20px;
             @media only screen and (min-width: $device-sm) {
                 padding: 20% 25%;
@@ -392,12 +377,12 @@
             }
             @media only screen and (min-width: $device-lg) {
                 margin-bottom: 0;                
-                padding: 19% 20%;                
+                padding: 23%;                
                 position: absolute;
                 left: 15px;
             }
             @media only screen and (min-width: $device-xl) {
-                padding: 15% 17%;
+                padding: 20%;
             }
             img {
                 position: absolute;
@@ -479,6 +464,159 @@
             &:hover {
                 background: $site_secondary_color;
                 color: $site_primary_color;
+            }
+        }
+    }
+}
+
+/******** Get in Touch Section ********/
+
+.get-in-touch {    
+    margin-bottom: 0;
+    background-color: $white_color;
+    p {
+        margin-bottom: 20px;
+        @media only screen and (min-width: $device-md) {
+            margin-bottom: 50px;    
+        }        
+    }
+    .form-wrapper {
+        @include flexbox;
+        @include space-between;
+        @include flexColumn;
+        @media only screen and (min-width: $device-lg) {
+            flex-direction: row;
+        }
+        .image {
+            max-width: 350px;
+            margin: 0 auto 20px;
+            @media only screen and (min-width: $device-lg) {
+                max-width: 400px;
+                margin: unset;
+            }
+        }
+        .form {
+            width: 100%;
+            @media only screen and (min-width: $device-md) {
+                width: calc(100% - 400px);
+            }
+            @media only screen and (min-width: $device-lg) {
+                width: calc(100% - 500px);
+            }
+            .icon {
+                width: 15px;
+                position: absolute;
+                top: 49%;
+                left: 0;
+                transform: translate(90%,-60%);
+                @media only screen and (min-width: $device-md) {
+                    width: 17px;
+                    transform: translate(100%,-60%);
+                }
+            }
+            .form-group{
+                width: 100%;                
+                margin-bottom: 20px;
+                position: relative;
+                &.two {
+                    width: calc(50% - 7px);
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-bottom: 20px;
+                    @media only screen and (min-width: $device-md) {
+                        width: calc(50% - 12px);
+                        margin-right: 20px;
+                    }
+                    &:nth-child(2) {
+                        margin-right: 0;
+                    }
+                }
+                input {
+                    height: 40px;
+                    line-height: 40px;
+                    border: 1px solid $site_primary_color;
+                    width: 100%;
+                    padding: 0 10px 0 40px;
+                    @media only screen and (min-width: $device-md) {
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 10px 0 50px;
+                    }                    
+                    &:focus {outline:none;}
+                    &.error {
+                        border: 1px solid #8B0000;
+                    }
+                }
+                textarea {
+                    border: 1px solid $site_primary_color;
+                    width: 100%;
+                    padding: 10px 10px 10px 40px;
+                    @media only screen and (min-width: $device-md) {                     
+                        padding: 10px 10px 10px 50px;
+                    }
+                    &.error {
+                        border: 1px solid #8B0000;
+                    }
+                    &:focus {outline:none;}                    
+                }
+                button {
+                    background: $site_primary_color;
+                    color: $white_color;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 100%;
+                    @include text-center;
+                    @media only screen and (min-width: $device-md) {
+                        height: 50px;
+                        line-height: 50px;                        
+                    }
+                }
+            }
+            label.error {
+                position: absolute;
+                color: #8B0000;
+                left: 0;
+                bottom: -17px;
+                font-size: 11px;
+            }
+            button {
+                width: 100%;                
+                @include border-radius(0);
+            }
+        }
+    }
+}
+/******** Global Reach Section ********/
+.global-reach {
+    margin: 0;
+    .map-image {
+        margin-bottom: 20px;
+    }
+    ul.country-list {
+        max-width: 260px;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        margin: 0 0 0 auto;
+        @media only screen and (min-width: $device-sm) {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        @media only screen and (min-width: $device-md) {
+            max-width: 650px;
+            columns: 4;
+            -webkit-columns: 4;
+            -moz-columns: 4;
+        }
+        @media only screen and (min-width: $device-lg) {
+            max-width: 700px;
+        }
+        li {
+            margin-bottom: 5px;
+            list-style-type: circle;
+            color: $site_secondary_color;
+            a {
+                font-weight: 600;
             }
         }
     }

@@ -150,7 +150,7 @@
                     </div>
                 </section>
                 <!-- Get in Touch Section -->
-                <section class="get-in-touch">
+                <section class="get-in-touch" id="contact-us">
                     <div class="container">
                         <h3>GET IN TOUCH</h3>
                         <p>Lorem ipsum dolor sit amet. Aut rerum nemo nonsunt ipsam et dicta cupiditate sed ullam quasi
@@ -320,41 +320,9 @@
             font-size: 11px;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
     <script type="text/javascript">
-        // $(document).ready(function() {
-        //     $('#firstname').keyup(function() {
-        //         firstname_check();
-        //     });
-        //     function firstname_check() {
-        //         let firstname = $('#firstname').val();                
-        //         if (firstname.length == '') {
-        //             $('#firstname').focus();
-        //             $('#firstname').css("border-color", "red");
-        //             return false;
-        //         }
-        //         else {
-        //             $('#firstname').css("border-color", "green");
-        //         }                
-        //     }
-        //     $('#lastname').keyup(function() {
-        //         lastname_check();
-        //     });
-        //     function lastname_check() {
-        //         let lastname = $('#lastname').val();                
-        //         if (lastname.length == '') {
-        //             $('#lastname').focus();
-        //             $('#lastname').css("border-color", "red");
-        //             return false;
-        //         }
-        //         else {
-        //             $('#lastname').css("border-color", "green");
-        //         }                
-        //     }
-        // });
-
-
         $(document).ready(function () {
-
             $("#contactForm").validate({
                 rules: {
                     firstname: { required: true },
@@ -371,12 +339,8 @@
                     email: { required: "Enter your Email", email: "Please enter valid email address" },
                 }
             });
-
-
         });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
-    <script>
+
         $('nav .mobile-menu').click(function(){
             $('nav ul').slideToggle('slow');
             $('nav ul ul').css('display', 'none');
@@ -386,15 +350,17 @@
                 $(this).find('ul').slideToggle('slow');
         });
 
-        //slideToggle sets the display to none (inline - with the style tag), once the height of the element is 0.
-        //if the window is resized from mobile to desktop, the element will not appear.
-
         $(window).resize(function(){
             if($(window).width() > 768){
-                $('ul').removeAtrr('style');
+                $('nav ul').removeAtrr('style');
             }
         });
-    </script> 
+        // Menu Selection
+        $('.header-wrapper ul li').click(function(e){            
+            $('.header-wrapper li').removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
 </body>
 
 </html>

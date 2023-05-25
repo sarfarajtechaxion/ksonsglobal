@@ -290,13 +290,15 @@
                 $(this).find('ul').slideToggle('slow');
         });
 
-        //slideToggle sets the display to none (inline - with the style tag), once the height of the element is 0.
-        //if the window is resized from mobile to desktop, the element will not appear.
-
         $(window).resize(function(){
             if($(window).width() > 768){
-                $('ul').removeAtrr('style');
+                $('nav ul').removeAtrr('style');
             }
+        });
+        // Menu Selection
+        $('.header-wrapper ul li').click(function(e){
+            $('.header-wrapper li').removeClass("active");
+            $(this).addClass("active");
         });
     </script> 
 </body>

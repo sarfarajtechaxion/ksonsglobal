@@ -130,7 +130,7 @@ footer {
         @include align-item-center;
         @include text-center;
         padding: 15px 0;
-        font-size: 10px;
+        font-size: 12px;
         @media only screen and (min-width: $device-md) {
             text-align: unset;
             flex-direction: row;

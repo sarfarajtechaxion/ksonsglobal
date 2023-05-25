@@ -1,5 +1,5 @@
 @import "../common/variable";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 @mixin body-font-style {    
     font-style: normal;
@@ -142,11 +142,11 @@
 }
 
 @mixin font-md{
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 30px;
+    line-height: 35px;
     @media only screen and (min-width: $device-md) {
-        font-size: 30px;
-        line-height: 35px;
+        font-size: 35px;
+        line-height: 40px;
     }
     @media only screen and (min-width: $device-lg) {
         font-size: 40px;
@@ -182,7 +182,7 @@
 }
 
 @mixin body-fonts {
-    font-size: 13px;    
+    font-size: 17px;    
 }
 
 @mixin h1 {
@@ -213,7 +213,9 @@
 
 @mixin p {
     @include body-fonts;
-    line-height: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 @mixin row {
