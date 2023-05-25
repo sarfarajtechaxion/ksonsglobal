@@ -166,7 +166,7 @@ footer .row .Links-wrapper {
 
 @media only screen and (min-width: 768px) {
   footer .row .Links-wrapper {
-    width: 65%;
+    width: 50%;
     margin-bottom: 0;
   }
 }
@@ -196,7 +196,7 @@ footer .row .location {
 
 @media only screen and (min-width: 768px) {
   footer .row .location {
-    width: 30%;
+    width: 40%;
   }
 }
 
@@ -302,9 +302,10 @@ footer .copyright-wrapper {
   text-align: center;
   padding: 15px 0;
   font-size: 12px;
+  gap: 10px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   footer .copyright-wrapper {
     text-align: unset;
     -webkit-box-orient: horizontal;
@@ -314,6 +315,7 @@ footer .copyright-wrapper {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    gap: 0;
   }
 }
 

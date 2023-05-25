@@ -41,7 +41,7 @@ footer {
             width: 100%;
             margin-bottom: 20px;
             @media only screen and (min-width: $device-md) {
-                width: 65%;
+                width: 50%;
                 margin-bottom: 0;
             }
             @media only screen and (min-width: $device-lg) {                
@@ -59,7 +59,7 @@ footer {
             @include flexColumn;
             width: 100%;            
             @media only screen and (min-width: $device-md) {
-                width: 30%;
+                width: 40%;
             }
             @media only screen and (min-width: $device-lg) {
                 width: 25%;
@@ -128,10 +128,12 @@ footer {
         @include text-center;
         padding: 15px 0;
         font-size: 12px;
-        @media only screen and (min-width: $device-md) {
+        gap: 10px;
+        @media only screen and (min-width: $device-lg) {
             text-align: unset;
             flex-direction: row;
             @include space-between;
+            gap: 0;
         }
         footer .copyright-wrapper div {
             margin-bottom: 10px; 

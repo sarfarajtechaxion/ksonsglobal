@@ -423,11 +423,14 @@ h3 {
         }
         .form {
             width: 100%;
+            margin: 0 auto;
             @media only screen and (min-width: $device-md) {
-                width: calc(100% - 400px);
+                width: calc(100% - 200px);
+                
             }
             @media only screen and (min-width: $device-lg) {
                 width: calc(100% - 500px);
+                margin: unset;
             }
             .icon {
                 width: 15px;
