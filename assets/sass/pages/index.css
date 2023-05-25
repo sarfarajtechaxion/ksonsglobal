@@ -699,6 +699,12 @@
   background-color: #FFFFFF;
 }
 
+.get-in-touch h3 {
+  font-weight: 900;
+  margin: 0 0 20px;
+  color: #18352D;
+}
+
 .get-in-touch p {
   margin-bottom: 20px;
 }
@@ -877,6 +883,12 @@
 /******** Global Reach Section ********/
 .global-reach {
   margin: 0;
+}
+
+.global-reach h3 {
+  font-weight: 900;
+  margin: 0 0 20px;
+  color: #18352D;
 }
 
 .global-reach .map-image {

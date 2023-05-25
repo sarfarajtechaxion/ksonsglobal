@@ -479,6 +479,11 @@
 .get-in-touch {    
     margin-bottom: 0;
     background-color: $white_color;
+    h3 {
+        font-weight: 900;
+        margin: 0 0 20px;
+        color: $site_primary_color;
+    }
     p {
         margin-bottom: 20px;
         @media only screen and (min-width: $device-md) {
@@ -594,6 +599,11 @@
 /******** Global Reach Section ********/
 .global-reach {
     margin: 0;
+    h3 {
+        font-weight: 900;
+        margin: 0 0 20px;
+        color: $site_primary_color;
+    }
     .map-image {
         margin-bottom: 20px;
     }
