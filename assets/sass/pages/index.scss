@@ -85,6 +85,11 @@
     @media only screen and (min-width: $device-lg) {
         padding-top: 0;        
     }
+    h3 {
+        font-weight: 900;
+        margin: 0 0 20px;
+        color: $site_primary_color;
+    }
     .our-product-wrapper {
         position: relative;
     }

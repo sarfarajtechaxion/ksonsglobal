@@ -129,6 +129,12 @@
   }
 }
 
+.our-product h3 {
+  font-weight: 900;
+  margin: 0 0 20px;
+  color: #18352D;
+}
+
 .our-product .our-product-wrapper {
   position: relative;
 }
