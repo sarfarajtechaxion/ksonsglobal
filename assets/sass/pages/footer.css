@@ -4,9 +4,10 @@ footer .footer-wrapper {
   padding: 50px 0 20px;
 }
 
-footer .footer-wrapper .title {
+footer h6 {
   font-weight: 600;
   color: #002043;
+  margin: 0 0 20px;
 }
 
 footer .row {
@@ -139,7 +140,6 @@ footer .row .company {
 }
 
 footer .row .company p {
-  font-weight: 500;
   max-width: 300px;
   margin: 0 auto;
   text-align: center;
@@ -173,13 +173,17 @@ footer .row .Links-wrapper {
 
 @media only screen and (min-width: 1024px) {
   footer .row .Links-wrapper {
-    width: 40%;
+    width: 33%;
   }
 }
 
 footer .row .Links-wrapper li {
   padding: 0 0 5px;
   text-transform: capitalize;
+}
+
+footer .row .Links-wrapper li a {
+  font-weight: 300;
 }
 
 footer .row .location {
@@ -216,12 +220,7 @@ footer .row .location p {
 
 footer .row .location p i {
   margin-right: 15px;
-  font-size: 14px;
-}
-
-footer .other-products .title {
-  visibility: hidden;
-  display: block;
+  font-size: 16px;
 }
 
 footer .footer-logo {
@@ -248,16 +247,10 @@ footer .social-link {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
   footer .social-link {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
     margin-bottom: 10px;
   }
 }
@@ -281,13 +274,14 @@ footer .social-link a:hover {
 }
 
 footer .social-link li {
+  text-align: center;
+}
+
+footer .social-link li .fa {
+  border: 1px solid #6A6B6B;
+  padding: 5px;
   width: 30px;
   height: 30px;
-  border: 1px solid #6A6B6B;
-  border-radius: 50%;
-  display: block;
-  text-align: center;
-  padding-top: 2px;
 }
 
 footer .copyright-wrapper {

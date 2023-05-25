@@ -1,5 +1,10 @@
 @import "../common/mixin";
-
+h3 {
+    font-weight: 900;
+    margin: 0 0 20px;
+    color: $site_primary_color;
+    text-transform: capitalize;
+}
 /******** Banner Section ********/
 .banner {    
     background: $site_primary_color;
@@ -38,7 +43,7 @@
             color: $white_color;
             font-weight: 400;
             margin: 0 0 20px;
-            text-align: center;
+            @include text-center;
             @media only screen and (min-width: $device-md) {
                 margin: 0 0 40px;
                 text-align: left;
@@ -77,19 +82,7 @@
 
 /******** Our Product Section ********/
 .our-product {
-    margin-top: 0;
-    padding: 30px 0;
-    @media only screen and (min-width: $device-md) {
-        padding: 40px 0 50px;
-    }
-    @media only screen and (min-width: $device-lg) {
-        padding-top: 0;        
-    }
-    h3 {
-        font-weight: 900;
-        margin: 0 0 20px;
-        color: $site_primary_color;
-    }
+    
     .our-product-wrapper {
         position: relative;
     }
@@ -162,22 +155,7 @@
 
 /******** About us Section ********/
 .about-us {
-    padding: 0;    
-    .container {
-        background: $white_color;
-        position: relative;
-        @media only screen and (min-width: $device-md) {
-            padding-right: 0;
-        }
-        &:before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: $white_color;
-            position: absolute;
-            left: -100%;
-        }
-    }
+    background: $white_color;    
     .about-us-wrapper {
         @include flexbox;
         @include align-item-center;
@@ -187,10 +165,8 @@
             @include space-between;
         }
         .content {
-            padding: 20px 0;
             max-width: 710px;
-            @media only screen and (min-width: $device-md) {
-                padding: 50px 35px 40px 0;
+            @media only screen and (min-width: $device-md) {                
                 max-width: 410px;
             }
             @media only screen and (min-width: $device-lg) {
@@ -209,61 +185,22 @@
             }
         }
         .video {
-            position: relative;            
-            margin-top: 25px;            
+            max-width: 400px;
             width: 100%;
-            z-index: 1;
-            @media only screen and (min-width: $device-md) {
-                width: calc(100% - 440px);
-                position: absolute;
-                right: 15px;      
-                margin-top: 0;          
-            }
-            @media only screen and (min-width: $device-lg) {                
-                width: calc(100% - 610px);
-            }
-            @media only screen and (min-width: $device-xl) {
-                width: calc(100% - 760px);
-                right: 0;
-                top: -35px;
-            }
-            a {
-                position: absolute;
-                right: 0;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%,-50%);
-                z-index: 9;
-                @include text-center;
-                img {                    
-                    position: relative;
-                    width: 50px;
-                    height: auto;
-                    @media only screen and (min-width: $device-lg) {                
-                        width: 100px;
-                    }
-                }
-            }
-            img {
-                height: 300px;
-                @media only screen and (min-width: $device-lg) { 
-                    height: 400px;
-                }
-            }
         }     
     }
 }
 
 /******** Our Service Section ********/
-.our-service-wrapper {
-    max-width: 780px;
-    margin: 0 auto 20px;
-    text-align: center;
+.our-service {
+    background-color: $white_color;
+}
+.our-service-wrapper {    
+    margin-bottom: 20px;
     h3 {
         font-weight: 900;
         margin: 0 0 20px;
         color: $site_primary_color;
-        text-align: center;
     }    
     a {
         font-weight: 700;
@@ -295,7 +232,7 @@
     }    
 }
 
-/******** Testimonial Section ********/
+/******** Testimonial Section ********
 .testimonial {
     padding: 0;      
     overflow: hidden;
@@ -399,22 +336,10 @@
             }
         }     
     }    
-}
+} */
 
 /******** Our Blog Section ********/
-.our-blog {
-    @media only screen and (min-width: $device-md) {
-        padding: 0;
-    }    
-    h3 {
-        font-weight: 900;
-        margin: 0 0 20px;
-        color: $site_primary_color;
-        text-align: center;
-        @media only screen and (min-width: $device-md) {
-            margin: 0 0 40px;
-        }
-    } 
+.our-blog {        
     .blog-list {
         @include flexbox;
         flex-wrap: wrap;
@@ -448,9 +373,6 @@
                 @include border-radius(25px);
             }
         }
-        p {
-            font-weight: 500;
-        }    
         a {
             font-weight: 700;
         }
@@ -477,13 +399,7 @@
 /******** Get in Touch Section ********/
 
 .get-in-touch {    
-    margin-bottom: 0;
     background-color: $white_color;
-    h3 {
-        font-weight: 900;
-        margin: 0 0 20px;
-        color: $site_primary_color;
-    }
     p {
         margin-bottom: 20px;
         @media only screen and (min-width: $device-md) {
@@ -598,12 +514,7 @@
 }
 /******** Global Reach Section ********/
 .global-reach {
-    margin: 0;
-    h3 {
-        font-weight: 900;
-        margin: 0 0 20px;
-        color: $site_primary_color;
-    }
+    margin: 0;  
     .map-image {
         margin-bottom: 20px;
     }

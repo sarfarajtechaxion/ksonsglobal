@@ -14,18 +14,13 @@
     <link rel="stylesheet" href="./assets/sass/pages/index.css" />
     <link rel="stylesheet" href="./assets/sass/pages/footer.css" />
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/custom.js"></script>  
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="info-bar">
-            <div class="container">
-                
-            </div>        
-        </div>
+    <header class="header">        
         <div class="header-wrap">
             <div class="container">
                 <div class="header-wrapper">
@@ -46,13 +41,13 @@
                         </div>
                         <nav class="navigation">
                           <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#product">Our Product</a></li>
-                            <li><a href="#about-us">about us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#testimonial">testimonial</a></li>
-                            <li><a href="#blog">Blog</a></li>
-                            <li><a href="#contact-us">Contact</a></li>
+                            <li><a class="scroll-nav" href="#home">Home</a></li>
+                            <li><a class="scroll-nav" href="#product">Our Product</a></li>
+                            <li><a class="scroll-nav" href="#about-us">about us</a></li>
+                            <li><a class="scroll-nav" href="#services">Services</a></li>
+                            <!-- <li><a class="scroll-nav" href="#testimonial">testimonial</a></li> -->
+                            <li><a class="scroll-nav" href="#blog">Blog</a></li>
+                            <li><a class="scroll-nav" href="#contact-us">Contact</a></li>
                           </ul> 
                         </nav>      
                     </div>
@@ -71,7 +66,7 @@
                             <div class="banner-content">
                                 <!-- <h1>KSONS GLOBAL</h1> -->
                                 <h3>Your Reliable Partner In Sourcing​ Commodities​</h3>
-                                <a href="contact.html" class="btn btn-small">get in touch</a>
+                                <a href="#contact-us" class="btn btn-small scroll-nav">get in touch</a>
                             </div>
                             
                             <div class="banner-image">
@@ -83,6 +78,20 @@
                             </div>
                         </div>
                     </div>                    
+                </section> 
+                <!-- About US -->
+                <section class="about-us" id="about-us">
+                    <div class="container">                                                
+                        <div class="about-us-wrapper">
+                            <div class="content">
+                                <h3>About us</h3>
+                                <p>KSONS Global Commodities has established itself as one of the most reputed Agro Products offering platforms, a credibility built on the Trust of Delivering ” ONLY THE BEST”. This has been possible only due to our deep- rooted understanding of the Agro- Industry and the ever changing Global Markets. Ability to trade any volume of goods in Bulk Vessel, Break Bulk and by Container, anywhere, anytime fortifies our strength. <a href="#" title="about-us">Read More</a></p>
+                            </div>
+                            <div class="video">                                                                    
+                                <iframe width="100%" height="250px" src="https://www.youtube-nocookie.com/embed/nziA33FrhoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>                    
+                    </div>
                 </section>  
                  <!-- Product Section -->
                  <section class="our-product" id="product">
@@ -183,25 +192,7 @@
                             </ul>                          
                         </div>                                            
                     </div>
-                </section> 
-                <!-- About US -->
-                <section class="about-us" id="about-us">
-                    <div class="container">                                                
-                        <div class="about-us-wrapper">
-                            <div class="content">
-                                <h3>About us</h3>
-                                <p>KSONS Global Commodities has established itself as one of the most reputed Agro Products offering platforms, a credibility built on the Trust of Delivering ” ONLY THE BEST”. This has been possible only due to our deep- rooted understanding of the Agro- Industry and the ever changing Global Markets. Ability to trade any volume of goods in Bulk Vessel, Break Bulk and by Container, anywhere, anytime fortifies our strength. <a href="about-us.html" title="about-us">Read More</a></p>
-                            </div>
-                            <div class="video">                                
-                                    <img src="./assets/images/home/video.png" alt="video" title="video" height="300" width="1920" />
-                                    <!-- <iframe width="100%" height="300px" src="https://www.youtube-nocookie.com/embed/nziA33FrhoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-                                    <a href="https://www.youtube-nocookie.com/embed/nziA33FrhoI" title="about-us" target="_blank">
-                                        <img src="./assets/images/home/play.svg" alt="play" title="play" height="50" width="50" />
-                                    </a>
-                            </div>
-                        </div>                    
-                    </div>
-                </section>      
+                </section>                      
                 <!-- Our Services -->
                 <section class="our-service" id="services">
                     <div class="container">                                                
@@ -233,7 +224,7 @@
                         </ul>
                     </div>
                 </section>
-                <!-- Testimonial -->
+                <!-- Testimonial 
                 <section class="testimonial" id='testimonial'>
                     <div class="container">                                                
                         <div class="testimonial-wrapper">
@@ -251,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                </section>    
+                </section>   --> 
                 <!-- Our Blog -->
                 <section class="our-blog" id="blog">
                     <div class="container">    
@@ -267,7 +258,7 @@
                                         </picture>
                                         <div class="blog-title">Lorem ipsum dolor . Lorem ipsum dolor</div>
                                     </div>                                    
-                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit.<a href="http://"> Read More</a></p>
+                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum.<a href="http://"> Read More</a></p>
                                 </li>
                                 <li>
                                     <div class="image">
@@ -278,7 +269,7 @@
                                         </picture>
                                         <div class="blog-title">Lorem ipsum dolor . Lorem ipsum dolor</div>
                                     </div>                                    
-                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit.<a href="http://"> Read More</a></p>
+                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum.<a href="http://"> Read More</a></p>
                                 </li>
                                 <li>
                                     <div class="image">
@@ -289,7 +280,7 @@
                                         </picture>
                                         <div class="blog-title">Lorem ipsum dolor . Lorem ipsum dolor</div>
                                     </div>                                    
-                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit.<a href="http://"> Read More</a></p>
+                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum.<a href="http://"> Read More</a></p>
                                 </li>
                                 <li>
                                     <div class="image">
@@ -300,7 +291,7 @@
                                         </picture>
                                         <div class="blog-title">Lorem ipsum dolor . Lorem ipsum dolor</div>
                                     </div>                                    
-                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit.<a href="http://"> Read More</a></p>
+                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum.<a href="http://"> Read More</a></p>
                                 </li>
                                 <li>
                                     <div class="image">
@@ -311,7 +302,7 @@
                                         </picture>
                                         <div class="blog-title">Lorem ipsum dolor . Lorem ipsum dolor</div>
                                     </div>                                    
-                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit.<a href="http://"> Read More</a></p>
+                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum.<a href="http://"> Read More</a></p>
                                 </li>
                                 <li>
                                     <div class="image">
@@ -322,7 +313,7 @@
                                         </picture>
                                         <div class="blog-title">Lorem ipsum dolor . Lorem ipsum dolor</div>
                                     </div>                                    
-                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit.<a href="http://"> Read More</a></p>
+                                    <p>Lorem ipsum dolor sit amet, adipielit, consectetur dolor sit amet, adipiscing elit, consectetur Lorem ipsum.<a href="http://"> Read More</a></p>
                                 </li>
                             </ul>                          
                         </div>                    
@@ -334,7 +325,7 @@
                 <!-- Get in Touch Section -->
                 <section class="get-in-touch" id="contact-us">
                     <div class="container">
-                        <h3>GET IN TOUCH</h3>
+                        <h3>get in touch</h3>
                         <p>Lorem ipsum dolor sit amet. Aut rerum nemo nonsunt ipsam et dicta cupiditate sed ullam quasi
                             est dolorem nesciunt hic harum placeat cupiditate sed ullam quasi est dolorem nesciunt hic
                             harum placeat. Lorem ipsum dolor sit amet. Aut rerum nemo nonsunt ipsam et dicta nesciunt
@@ -426,36 +417,33 @@
                     </div>
                     <div class="Links-wrapper">                        
                         <ul class="quick-links">
-                            <li class="title">Quick Links</li>
-                            <li><a href="index.html" title="Homepage">home</a></li>
-                            <li><a href="product.html" title="Our Products">our Products</a></li>
-                            <li><a href="blog-n-event.html" title="Blog & Events">blog & events</a></li>
-                            <li><a href="contact.html" title="Contact Us">Contact us</a></li>
+                            <h6 >Quick Links</h6>
+                            <li><a href="#home" title="Homepage" class='scroll-nav'>home</a></li>
+                            <li><a href="#product" title="Our Products" class='scroll-nav'>our Products</a></li>
+                            <li><a href="#blog" title="Blog & Events" class='scroll-nav'>blog & events</a></li>
+                            <li><a href="#contact-us" title="Contact Us" class='scroll-nav'>Contact us</a></li>
                         </ul>
                         <!-- <div class="title">Our Products</div> -->
                         <ul class="our-products">
-                            <li class="title">Our Products</li>
-                            <li><a href="#" title="Rice">rice</a></li>
-                            <li><a href="#" title="Grains">grains</a></li>
-                            <li><a href="#" title="Sugar">sugar</a></li>
-                            <li><a href="#" title="Spice">spice: whole / powder </a></li>
-                            <li><a href="#" title="Peanuts">peanuts </a></li>                                        
-                        </ul>
-                        <ul class="other-products">              
-                            <li class="title">Our Products</li>
-                            <li><a href="#" title="Cotton">cotton </a></li>
-                            <li><a href="#" title="Animal Feed">animal feed </a></li>
-                            <li><a href="#" title="Pulses">pulses </a></li>
-                            <li><a href="#" title="Seasame"> seasame </a></li>                    
+                            <h6>Our Products</h6>
+                            <li><a href="#product" title="Rice">rice</a></li>
+                            <li><a href="#product" title="Grains">grains</a></li>
+                            <li><a href="#product" title="Sugar">sugar</a></li>
+                            <li><a href="#product" title="Spice">spice: whole / powder </a></li>
+                            <li><a href="#product" title="Peanuts">peanuts </a></li>                                                                
+                            <li><a href="#product" title="Cotton">cotton </a></li>
+                            <li><a href="#product" title="Animal Feed">animal feed </a></li>
+                            <li><a href="#product" title="Pulses">pulses </a></li>
+                            <li><a href="#product" title="Seasame"> seasame </a></li>                    
                         </ul>
                     </div>
                     <div class="location">
                         <ul class="social-link">                                
-                            <a href="http://" target="blank" title="Facebook"><li> <i class="fa fa-facebook" aria-hidden="true"></i> </li></a>
-                            <a href="http://" target="blank" title="Twitter"><li> <i class="fa fa-twitter" aria-hidden="true"></i> </li></a>
-                            <a href="http://" target="blank" title="Linked In"><li> <i class="fa fa-linkedin" aria-hidden="true"></i> </li></a>
+                            <a href="https://www.facebook.com/KSONS-107447635249229" target="blank" title="Facebook"><li> <i class="fa fa-facebook" aria-hidden="true"></i> </li></a>
+                            <a href="https://twitter.com/KSONS14" target="blank" title="Twitter"><li> <i class="fa fa-twitter" aria-hidden="true"></i> </li></a>
+                            <a href="https://www.linkedin.com/company/ksons-commodities-dmcc/" target="blank" title="Linked In"><li> <i class="fa fa-linkedin" aria-hidden="true"></i> </li></a>
                             <a href="http://" target="blank" title="Whatsapp"><li> <i class="fa fa-whatsapp" aria-hidden="true"></i> </li></a>                           
-                            <a href="http://" target="blank" title="Instagram"><li> <i class="fa fa-instagram" aria-hidden="true"></i> </li></a>                                
+                            <a href="https://www.instagram.com/ksons_dmcc/" target="blank" title="Instagram"><li> <i class="fa fa-instagram" aria-hidden="true"></i> </li></a>                                
                         </ul>
                         <p> <i class="fa fa-map-marker" aria-hidden="true"></i> Office 10 – K, GOLD TOWER CLUSTER <br/> Jumeirah Lake Tower, Dubai,<br/> United Arab Emirates</p>                
                         <p class="call"> <i class="fa fa-phone" aria-hidden="true"></i>  <a href="tel:+97144245940" title="Call">+971 4424 5940</a></p>
@@ -467,7 +455,7 @@
         <div class="copyright">
             <div class="container">
                 <div class="copyright-wrapper">
-                    <div> <a href="http://"> Privacy Policy</a> | <a href="http://">Disclaimer</a> | <a href="http://">Terms & Conditions</a> | <a href="http://">Refund and Cancellation Policy</a></div>
+                    <div> <a href="http://" target="blank" title="Privacy Policy"> Privacy Policy</a> | <a href="http://" target="blank" title="Disclaimer">Disclaimer</a> | <a href="http://" target="blank" title="Terms & Conditions">Terms & Conditions</a> | <a href="http://" target="blank" title="Refund and Cancellation Policy">Refund and Cancellation Policy</a></div>
                     <div>Copyright © 2023 Powered By Ksons | Design & Develop by <a href="https://www.techaxion.com/" target="blank" title="TECH AXION SYSTEM PVT LTD &#8211; TRANSFORMING DIGITALLY">techaxion</a></div>
                 </div>
             </div>
@@ -478,6 +466,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
     <script type="text/javascript">
+
+$(document).ready(function() {
+    
+});   
+
         jQuery(document).ready(function(){
             /**** Our Product ****/
             jQuery('.our-product .product-list').slick({
@@ -520,16 +513,11 @@
             });
             /**** Blog Post****/
             jQuery('.our-blog-wrapper .blog-list ').slick({
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
+                autoplay: true,
                 arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3                                                    
-                        }
-                    },
+                responsive: [                    
                     {
                         breakpoint: 600,
                         settings: {
@@ -545,6 +533,7 @@
                 ]                        
             });
         
+            /**** Humburger Menu****/
             const toggleButton = document.querySelector(".toggle");
             const navigation = document.querySelector(".navigation");
 
@@ -559,25 +548,29 @@
             });
             /***** Contact us form validation *****/
             $("#contactForm").validate({
-            rules: {
-                firstname: { required: true },
-                lastname: { required: true },
-                message: { required: true },
-                phone: { required: true, number: true, minlength: 10, maxlength: 10 },
-                email: { required: true, email: true },
-            },
-            message: {
-                firstname: { required: "Enter your firstname" },
-                lastname: { required: "Enter your lastname" },
-                message: { required: "Enter your message" },
-                phone: { required: "Enter your Phone", minlength: "phone number must 10 digit" },
-                email: { required: "Enter your Email", email: "Please enter valid email address" },
-            }
+                rules: {
+                    firstname: { required: true },
+                    lastname: { required: true },
+                    message: { required: true },
+                    phone: { required: true, number: true, minlength: 10, maxlength: 10 },
+                    email: { required: true, email: true },
+                },
+                message: {
+                    firstname: { required: "Enter your firstname" },
+                    lastname: { required: "Enter your lastname" },
+                    message: { required: "Enter your message" },
+                    phone: { required: "Enter your Phone", minlength: "phone number must 10 digit" },
+                    email: { required: "Enter your Email", email: "Please enter valid email address" },
+                }
+            });
+            /**** Humburger Menu****/
+            $('a.scroll-nav[href^=#]')
+            .bind('click.smoothScroll', function(event) {
+                event.preventDefault();
+                $('html, body').animate({ scrollTop: $( $(this).attr('href') ).offset().top - 70 }, 1000);
+            });
         });
-            
-    });
     
-        
     </script> 
 </body>
 </html>

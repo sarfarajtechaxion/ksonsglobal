@@ -4,11 +4,12 @@ footer {
     .footer-wrapper {
         background: $white_color;
         padding: 50px 0 20px;
-        .title {
-            font-weight: 600;
-            color: $site_tertiary_color;
-        }
     } 
+    h6 {
+        font-weight: 600;
+        color: $site_tertiary_color;
+        margin:  0 0 20px;
+    }
     .row {
         @include row;        
         @include space-between;
@@ -25,7 +26,6 @@ footer {
                 margin-bottom: 0;
             }
             p {
-                font-weight: 500;
                 max-width: 300px;
                 margin: 0 auto;
                 @include text-center;
@@ -45,11 +45,14 @@ footer {
                 margin-bottom: 0;
             }
             @media only screen and (min-width: $device-lg) {                
-                width: 40%;
+                width: 33%;
             }
             li {
                 padding: 0 0 5px;
                 text-transform: capitalize;
+                a {
+                    font-weight: 300;
+                }
             }
         }
         .location {
@@ -68,15 +71,11 @@ footer {
                 margin-bottom: 10px;
                 i {
                     margin-right: 15px;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
             }
         }
-    }
-    .other-products .title {       
-        visibility: hidden;    
-        display: block;        
-    }
+    }    
 
     .footer-logo {
         max-width: 200px;
@@ -92,10 +91,8 @@ footer {
     .social-link {
         @include flexbox;
         @include align-item-center;
-        margin-bottom: 20px;
-        @include just-center;
-        @media only screen and (min-width: $device-md) {
-            @include just-end;
+        margin-bottom: 20px;        
+        @media only screen and (min-width: $device-md) {            
             margin-bottom: 10px;
         }
         a {
@@ -112,14 +109,14 @@ footer {
                color: $site_secondary_color;
            }
         }
-        li {
-            width: 30px;            
-            height: 30px;
-            border: 1px solid #6A6B6B;
-            @include border-radius(50%);
-            display: block;
+        li {            
             @include text-center;
-            padding-top: 2px;            
+            .fa {
+                border: 1px solid #6A6B6B;
+                padding: 5px;
+                width: 30px;
+                height: 30px;
+            }     
         }
     }
 
