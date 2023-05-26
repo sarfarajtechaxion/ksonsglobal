@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+svg path {
+  fill: #eeeeee;
+  stroke: #FFFFFF;
+  stroke-width: 1;
+}
+
+svg path:hover {
+  fill: #002043;
+  -webkit-transition: fill 0.6s;
+  transition: fill 0.6s;
+  cursor: pointer;
+  stroke-width: 1;
+}
+
+svg #SA,
+svg .China,
+svg #BD,
+svg #IN,
+svg .Turkey,
+svg #DJ,
+svg .Malaysia,
+svg #TH,
+svg .Indonesia,
+svg #SO,
+svg #PK {
+  fill: #FFBE00;
+  stroke-width: 1;
+}
+
+svg #SA:hover,
+svg .China:hover,
+svg #BD:hover,
+svg #IN:hover,
+svg .Turkey:hover,
+svg #DJ:hover,
+svg .Malaysia:hover,
+svg #TH:hover,
+svg .Indonesia:hover,
+svg #SO:hover,
+svg #PK:hover {
+  fill: #18352D;
+  stroke-width: 1;
+}
+/*# sourceMappingURL=map.css.map */

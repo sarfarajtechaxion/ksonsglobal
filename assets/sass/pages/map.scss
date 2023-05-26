@@ -1,0 +1,33 @@
+@import "../common/mixin";
+svg  {
+    path {
+        fill: $section-bg;
+        stroke: $white_color;
+        stroke-width: 1;
+        &:hover {
+            fill: $site_tertiary_color;
+            transition: fill 0.6s;
+            cursor: pointer;
+            stroke-width: 1;
+        }
+    }
+    
+    #SA,
+    .China,
+    #BD,
+    #IN,
+    .Turkey,
+    #DJ,
+    .Malaysia,
+    #TH,
+    .Indonesia,
+    #SO,
+    #PK {
+        fill: $site_secondary_color;
+        stroke-width: 1;
+        &:hover {
+            fill: $site_primary_color;
+            stroke-width: 1;
+        }
+    }
+}

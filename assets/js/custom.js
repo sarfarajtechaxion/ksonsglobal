@@ -1,32 +1,3 @@
- // document.getElementById("send").addEventListener("click", function(event){ 
-        //     event.preventDefault();
-        //     console.log("Send button clicked."); 
-
-        //     // let contactForm = document.getElementById('contactForm');
-        //     let firstname = document.getElementById('firstname');
-        //     let lastname = document.getElementById('lastname');
-        //     let email = document.getElementById('email');
-        //     let phone = document.getElementById('phone');
-        //     let message = document.getElementById('message');
-
-        //     if(firstname === "" || firstname === null) {
-        //         firstname.classList.add('error');
-        //         alert('error added');
-        //     }
-        //     else {                
-        //         alert('All good..!');
-        //     }
-        // });
-        // document.getElementById("send").addEventListener("mouseenter", function(event){             
-        //     event.target.style.backgroundColor = "purple";
-        //     event.target.style.color = "orange";
-        //     event.target.style.border = "0";
-        // });
-        // document.getElementById("send").addEventListener("mouseleave", function(event){             
-        //     event.target.style.backgroundColor = "#18352D";
-        //     event.target.style.color = "#FFFFFF";
-        // });
-
 $(window).scroll(function(){
     if ($(this).scrollTop() > 50) {
     $('header').addClass('fixed');
@@ -35,12 +6,102 @@ $(window).scroll(function(){
     }
 });
 
-function myFunction(x) {
-    x.classList.toggle("change");
-}
-
-$(document).ready(function(){
-    $('.mobile-menu').click(function(){    
-        $('.header nav').toggleClass('active');
+jQuery(document).ready(function(){
+    /**** Our Product ****/
+    jQuery('.our-product .product-list').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 1300,
+        nextArrow: '<span class="arrow-right"></span>',
+        prevArrow: '<span class="arrow-left"></span>',
+        responsive: [   
+            {
+                breakpoint: 1200,
+                settings: {
+                    arrows:false,                              
+                }
+            },  
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows:false,  
+                    slidesToShow: 4,                          
+                }
+            },                 
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows:false,
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows:false,
+                    slidesToShow: 1
+                }
+            }
+        ]                        
     });
-}) 
+    /**** Blog Post****/
+    jQuery('.our-blog-wrapper .blog-list ').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // autoplay: true,
+        arrows: false,
+        responsive: [                    
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]                        
+    });
+
+    /**** Humburger Menu****/
+    const toggleButton = document.querySelector(".toggle");
+    const navigation = document.querySelector(".navigation");
+
+    toggleButton.addEventListener("click", () => {
+        toggleButton.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+    navigation.addEventListener("click", () => {
+        toggleButton.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+    /***** Contact us form validation *****/
+    $("#contactForm").validate({
+        rules: {
+            firstname: { required: true },
+            lastname: { required: true },
+            message: { required: true },
+            phone: { required: true, number: true, minlength: 10, maxlength: 10 },
+            email: { required: true, email: true },
+        },
+        message: {
+            firstname: { required: "Enter your firstname" },
+            lastname: { required: "Enter your lastname" },
+            message: { required: "Enter your message" },
+            phone: { required: "Enter your Phone", minlength: "phone number must 10 digit" },
+            email: { required: "Enter your Email", email: "Please enter valid email address" },
+        }
+    });
+    /**** Humburger Menu****/
+    $('a.scroll-nav[href^=#]')
+    .bind('click.smoothScroll', function(event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: $( $(this).attr('href') ).offset().top - 70 }, 1000);
+    });
+});

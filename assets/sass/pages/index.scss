@@ -4,16 +4,13 @@ h3 {
     margin: 0 0 20px;
     color: $site_primary_color;
     text-transform: capitalize;
+    span {
+        color: $site_secondary_color;
+    }
 }
 /******** Banner Section ********/
 .banner {    
     background: $site_primary_color;
-    height: 500px;
-    padding: 0;
-    @media only screen and (min-width: $device-md) {        
-        height: 350px;
-    }
-    
     .banner-wrapper {
         @include flexbox;
         @include space-between;        
@@ -27,7 +24,7 @@ h3 {
                 max-width: 450px;
             }
             @media only screen and (min-width: $device-lg) {
-                max-width: 550px;
+                max-width: 800px;
             }
         }
         h1 {
@@ -67,7 +64,8 @@ h3 {
 
         .banner-image {
             position: relative;            
-    
+            max-width: 400px;
+            margin: 0 auto;
             img {
                 max-width: 300px;
                 margin-bottom: 30px;
@@ -179,9 +177,10 @@ h3 {
                 font-weight: 700;
             }
             h3 {
-                font-weight: 900;
-                margin: 0 0 20px;
-                color: $site_primary_color;
+                margin-top: 20px;
+                @media only screen and (min-width: $device-md) {
+                    margin-top: 0;
+                }
             }
         }
         .video {
@@ -196,12 +195,7 @@ h3 {
     background-color: $white_color;
 }
 .our-service-wrapper {    
-    margin-bottom: 20px;
-    h3 {
-        font-weight: 900;
-        margin: 0 0 20px;
-        color: $site_primary_color;
-    }    
+    margin-bottom: 20px;       
     a {
         font-weight: 700;
     }
@@ -222,7 +216,7 @@ h3 {
         }
     }
     img {
-        width: 140px;
+        width: 100px;
         margin: 0 auto 10px;
         text-align: center;
         display: block;
@@ -280,16 +274,7 @@ h3 {
             @media only screen and (min-width: $device-xl) {
                 max-width: 1000px;
                 padding: 30px 40px 30px 330px;
-            }
-            h3 {
-                font-weight: 900;
-                margin: 0 0 10px;
-                color: $white_color;
-                @include text-center;
-                @media only screen and (min-width: $device-lg) {
-                    text-align: unset;                
-                }
-            }
+            }            
             .subtitle {
                 font-weight: normal;
                 text-transform: capitalize;
@@ -350,17 +335,14 @@ h3 {
         }
         .image {
             position: relative;
-            padding: 35% 50%;
-            margin-bottom: 10px;
+            padding: 35% 50%;            
             .blog-title {
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 right: 0;
                 text-align: center;
-                background: rgba(0,0,0,0.5);
-                border-bottom-left-radius: 25px;
-                border-bottom-right-radius: 25px;
+                background: rgba(0,0,0,0.5);               
                 padding: 10px;
                 color: $white_color;
             }
@@ -370,11 +352,20 @@ h3 {
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
-                @include border-radius(25px);
+                border-top-right-radius: 25px;
+                border-top-left-radius: 25px;
             }
+        }
+        p {
+            padding: 10px 15px 15px;
+            background-color: $white_color;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
         }
         a {
             font-weight: 700;
+            // border-color: red;
+            // transition: border-color .3s ease .4s;
         }
     }
 
@@ -410,6 +401,7 @@ h3 {
         @include flexbox;
         @include space-between;
         @include flexColumn;
+        @include align-item-center;
         @media only screen and (min-width: $device-lg) {
             flex-direction: row;
         }
@@ -417,7 +409,7 @@ h3 {
             max-width: 350px;
             margin: 0 auto 20px;
             @media only screen and (min-width: $device-lg) {
-                max-width: 400px;
+                max-width: 500px;
                 margin: unset;
             }
         }
@@ -429,7 +421,7 @@ h3 {
                 
             }
             @media only screen and (min-width: $device-lg) {
-                width: calc(100% - 500px);
+                width: calc(100% - 600px);
                 margin: unset;
             }
             .icon {

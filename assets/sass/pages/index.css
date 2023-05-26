@@ -6,17 +6,13 @@ h3 {
   text-transform: capitalize;
 }
 
+h3 span {
+  color: #FFBE00;
+}
+
 /******** Banner Section ********/
 .banner {
   background: #18352D;
-  height: 500px;
-  padding: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .banner {
-    height: 350px;
-  }
 }
 
 .banner .banner-wrapper {
@@ -53,7 +49,7 @@ h3 {
 
 @media only screen and (min-width: 1024px) {
   .banner .banner-wrapper .banner-content {
-    max-width: 550px;
+    max-width: 800px;
   }
 }
 
@@ -105,6 +101,8 @@ h3 {
 
 .banner .banner-wrapper .banner-image {
   position: relative;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .banner .banner-wrapper .banner-image img {
@@ -271,9 +269,13 @@ h3 {
 }
 
 .about-us .about-us-wrapper .content h3 {
-  font-weight: 900;
-  margin: 0 0 20px;
-  color: #18352D;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us .about-us-wrapper .content h3 {
+    margin-top: 0;
+  }
 }
 
 .about-us .about-us-wrapper .video {
@@ -288,12 +290,6 @@ h3 {
 
 .our-service-wrapper {
   margin-bottom: 20px;
-}
-
-.our-service-wrapper h3 {
-  font-weight: 900;
-  margin: 0 0 20px;
-  color: #18352D;
 }
 
 .our-service-wrapper a {
@@ -335,7 +331,7 @@ h3 {
 }
 
 .services-list img {
-  width: 140px;
+  width: 100px;
   margin: 0 auto 10px;
   text-align: center;
   display: block;
@@ -393,16 +389,7 @@ h3 {
             @media only screen and (min-width: $device-xl) {
                 max-width: 1000px;
                 padding: 30px 40px 30px 330px;
-            }
-            h3 {
-                font-weight: 900;
-                margin: 0 0 10px;
-                color: $white_color;
-                @include text-center;
-                @media only screen and (min-width: $device-lg) {
-                    text-align: unset;                
-                }
-            }
+            }            
             .subtitle {
                 font-weight: normal;
                 text-transform: capitalize;
@@ -469,7 +456,6 @@ h3 {
 .our-blog .blog-list .image {
   position: relative;
   padding: 35% 50%;
-  margin-bottom: 10px;
 }
 
 .our-blog .blog-list .image .blog-title {
@@ -479,8 +465,6 @@ h3 {
   right: 0;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
   padding: 10px;
   color: #FFFFFF;
 }
@@ -492,7 +476,15 @@ h3 {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.our-blog .blog-list p {
+  padding: 10px 15px 15px;
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .our-blog .blog-list a {
@@ -548,6 +540,9 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -566,7 +561,7 @@ h3 {
 
 @media only screen and (min-width: 1024px) {
   .get-in-touch .form-wrapper .image {
-    max-width: 400px;
+    max-width: 500px;
     margin: unset;
   }
 }
@@ -584,7 +579,7 @@ h3 {
 
 @media only screen and (min-width: 1024px) {
   .get-in-touch .form-wrapper .form {
-    width: calc(100% - 500px);
+    width: calc(100% - 600px);
     margin: unset;
   }
 }
