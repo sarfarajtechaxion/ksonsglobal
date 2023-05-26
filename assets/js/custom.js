@@ -68,6 +68,22 @@ jQuery(document).ready(function(){
         ]                        
     });
 
+     /**** Testimonial ****/
+     jQuery('.testimonial-content').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // autoplay: true,
+        arrows: false,
+        responsive: [                    
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]                        
+    });
+
     /**** Humburger Menu****/
     const toggleButton = document.querySelector(".toggle");
     const navigation = document.querySelector(".navigation");

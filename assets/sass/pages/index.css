@@ -10,6 +10,12 @@ h3 span {
   color: #FFBE00;
 }
 
+h6 {
+  font-weight: 600;
+  color: #002043;
+  margin: 0;
+}
+
 /******** Banner Section ********/
 .banner {
   background: #18352D;
@@ -437,7 +443,180 @@ h3 span {
         }     
     }    
 } */
+.testimonial-area {
+  position: relative;
+  z-index: 1;
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.testimonial-area .testimonial-content.slick-slider {
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.testimonial-area .testimonial-content.slick-slider .slick-list.draggable {
+  padding: 30px 15px;
+  width: 100%;
+}
+
+.testimonial-area .single-testimonial {
+  border: 7px solid #FFBE00;
+  text-align: center;
+  border-radius: 45px;
+  position: relative;
+  z-index: 2;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .testimonial-area .single-testimonial {
+    margin-right: 80px;
+  }
+}
+
+.testimonial-area .single-testimonial p {
+  font-size: 15px;
+  line-height: 24px;
+  padding: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.testimonial-area .single-testimonial::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -35px;
+  background: url(../../images/home/quote.png) no-repeat #F7F8F8;
+  background-size: 60%;
+  width: 126px;
+  height: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-position: 34px 15px;
+}
+
+.testimonial-area .single-testimonial::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  bottom: -34px;
+  background: url(../../images/home/quote.png) no-repeat #F7F8F8;
+  background-size: 60%;
+  width: 126px;
+  height: 100px;
+  background-position: 34px 19px;
+}
+
+.testimonial-area .single-testimonial .round {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.testimonial-area .single-testimonial .round-1::before {
+  content: "";
+  position: absolute;
+  left: 88px;
+  top: -7px;
+  width: 50px;
+  height: 7px;
+  background: #FFBE00;
+  border-radius: 30px;
+}
+
+.testimonial-area .single-testimonial .round-1::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 62px;
+  width: 7px;
+  height: 50px;
+  background: #FFBE00;
+  border-radius: 30px;
+}
+
+.testimonial-area .single-testimonial .round-2::before {
+  content: "";
+  position: absolute;
+  right: 87px;
+  bottom: -7px;
+  width: 50px;
+  height: 7px;
+  background: #FFBE00;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.testimonial-area .single-testimonial .round-2::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  bottom: 62px;
+  width: 7px;
+  height: 50px;
+  background: #FFBE00;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.testimonial-area .single-testimonial .client-video {
+  padding-right: 15px;
+}
+
+.testimonial-area .single-testimonial .client-info {
+  position: relative;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.testimonial-area .single-testimonial .client-info a {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+  font-size: 22px;
+}
+
+.testimonial-area .single-testimonial .client-info h6 {
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.testimonial-area .single-testimonial .client-info span {
+  display: inline-block;
+  font-size: 12px;
+}
+
 /******** Our Blog Section ********/
+.our-blog {
+  background-color: #FFFFFF;
+}
+
 .our-blog .blog-list {
   display: -ms-flex;
   display: -webkit-box;
@@ -514,10 +693,6 @@ h3 span {
 }
 
 /******** Get in Touch Section ********/
-.get-in-touch {
-  background-color: #FFFFFF;
-}
-
 .get-in-touch p {
   margin-bottom: 20px;
 }
@@ -582,6 +757,10 @@ h3 span {
     width: calc(100% - 600px);
     margin: unset;
   }
+}
+
+.get-in-touch .form-wrapper .form .message .icon {
+  top: 15%;
 }
 
 .get-in-touch .form-wrapper .form .icon {
@@ -700,6 +879,7 @@ h3 span {
 
 /******** Global Reach Section ********/
 .global-reach {
+  background-color: #FFFFFF;
   margin: 0;
 }
 
