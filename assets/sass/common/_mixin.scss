@@ -321,7 +321,7 @@
 }
 
 @mixin button {       
-    text-align: center;
+    @include text-center();
     @include transition(0.3s);
     border: 1px solid $site_primary_color;
     outline: none;    
@@ -332,8 +332,7 @@
     @include align-item-center();
     @include just-center();        
     height: 40px;
-    line-height: 40px;
-    @include border-radius(5px);        
+    line-height: 40px;        
 }
 
 @mixin btn-medium {        

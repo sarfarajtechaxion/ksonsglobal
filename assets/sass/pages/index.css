@@ -443,10 +443,13 @@ h6 {
         }     
     }    
 } */
-.testimonial-area {
-  position: relative;
-  z-index: 1;
-  max-width: 1430px;
+.testimonial-area .testimonial-content {
+  margin: 0 -40px;
+}
+
+.testimonial-area .testimonial-content > div {
+  padding: 0 40px;
+  width: calc(50% - 100px);
   margin: 0 auto;
 }
 
@@ -461,24 +464,24 @@ h6 {
 }
 
 .testimonial-area .single-testimonial {
-  border: 7px solid #FFBE00;
+  border: 2px solid #FFBE00;
   text-align: center;
   border-radius: 45px;
   position: relative;
   z-index: 2;
-  margin-right: 20px;
+  margin: 0 20px;
 }
 
 @media only screen and (min-width: 1024px) {
   .testimonial-area .single-testimonial {
-    margin-right: 80px;
+    margin: 0 40px;
   }
 }
 
 .testimonial-area .single-testimonial p {
   font-size: 15px;
   line-height: 24px;
-  padding: 50px;
+  padding: 40px;
   padding-bottom: 30px;
   position: relative;
   z-index: 3;
@@ -510,59 +513,6 @@ h6 {
   background-position: 34px 19px;
 }
 
-.testimonial-area .single-testimonial .round {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-}
-
-.testimonial-area .single-testimonial .round-1::before {
-  content: "";
-  position: absolute;
-  left: 88px;
-  top: -7px;
-  width: 50px;
-  height: 7px;
-  background: #FFBE00;
-  border-radius: 30px;
-}
-
-.testimonial-area .single-testimonial .round-1::after {
-  content: "";
-  position: absolute;
-  left: -7px;
-  top: 62px;
-  width: 7px;
-  height: 50px;
-  background: #FFBE00;
-  border-radius: 30px;
-}
-
-.testimonial-area .single-testimonial .round-2::before {
-  content: "";
-  position: absolute;
-  right: 87px;
-  bottom: -7px;
-  width: 50px;
-  height: 7px;
-  background: #FFBE00;
-  border-radius: 30px;
-  z-index: 1;
-}
-
-.testimonial-area .single-testimonial .round-2::after {
-  content: "";
-  position: absolute;
-  right: -7px;
-  bottom: 62px;
-  width: 7px;
-  height: 50px;
-  background: #FFBE00;
-  border-radius: 30px;
-  z-index: 1;
-}
-
 .testimonial-area .single-testimonial .client-video {
   padding-right: 15px;
 }
@@ -570,6 +520,7 @@ h6 {
 .testimonial-area .single-testimonial .client-info {
   position: relative;
   z-index: 3;
+  display: -ms-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,22 +538,23 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 100px;
+  display: -ms-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
   font-size: 22px;
 }
 
 .testimonial-area .single-testimonial .client-info h6 {
-  color: #000;
+  color: #000000;
   font-weight: 700;
   font-size: 18px;
 }
@@ -610,6 +562,39 @@ h6 {
 .testimonial-area .single-testimonial .client-info span {
   display: inline-block;
   font-size: 12px;
+}
+
+.testimonial-area .slick-dots {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 15px 0;
+  list-style-type: none;
+}
+
+.testimonial-area .slick-dots li {
+  margin: 0 0.25rem;
+}
+
+.testimonial-area .slick-dots button {
+  cursor: pointer;
+  display: block;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  border-radius: 100%;
+  background-color: #FFBE00;
+  text-indent: -9999px;
+}
+
+.testimonial-area .slick-dots li.slick-active button {
+  background-color: #18352D;
 }
 
 /******** Our Blog Section ********/
@@ -874,7 +859,6 @@ h6 {
 
 .get-in-touch .form-wrapper .form button {
   width: 100%;
-  border-radius: 0;
 }
 
 /******** Global Reach Section ********/
@@ -885,6 +869,18 @@ h6 {
 
 .global-reach .map-image {
   margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .global-reach .map-image svg {
+    height: 650px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .global-reach .map-image svg {
+    height: 650px;
+  }
 }
 
 .global-reach ul.country-list {
