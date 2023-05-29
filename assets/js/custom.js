@@ -72,7 +72,7 @@ jQuery(document).ready(function(){
      jQuery('.testimonial-content').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         dots: true,
         responsive: [                    
