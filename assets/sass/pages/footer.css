@@ -255,33 +255,19 @@ footer .social-link {
   }
 }
 
-footer .social-link a {
-  font-size: 17px;
-  margin-right: 10px;
-  color: #6A6B6B;
-}
-
-footer .social-link a:last-child {
-  margin-right: 0;
-}
-
-footer .social-link a li:hover {
-  background-color: #002043;
-}
-
-footer .social-link a:hover {
-  color: #FFBE00;
-}
-
 footer .social-link li {
-  text-align: center;
+  border: 1px solid #6A6B6B;
+  margin-right: 10px;
 }
 
-footer .social-link li .fa {
-  border: 1px solid #6A6B6B;
+footer .social-link li:hover {
+  border: 1px solid #002043;
+  background-color: #FFBE00;
+}
+
+footer .social-link li a img {
+  width: 35px;
   padding: 5px;
-  width: 30px;
-  height: 30px;
 }
 
 footer .copyright-wrapper {

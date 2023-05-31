@@ -95,28 +95,18 @@ footer {
         @media only screen and (min-width: $device-md) {            
             margin-bottom: 10px;
         }
-        a {
-            font-size: 17px;
-            margin-right: 10px;
-            color: #6A6B6B;
-            &:last-child {
-                margin-right: 0;
-            }
-            li:hover {
-                background-color: $site_tertiary_color;
-            }
-           &:hover{
-               color: $site_secondary_color;
-           }
-        }
+        
         li {            
-            @include text-center;
-            .fa {
-                border: 1px solid #6A6B6B;
+            border: 1px solid #6A6B6B;
+            margin-right: 10px;
+            &:hover {
+                border: 1px solid $site_tertiary_color;
+                background-color: $site_secondary_color;
+            }
+            a img {
+                width: 35px;
                 padding: 5px;
-                width: 30px;
-                height: 30px;
-            }     
+            }         
         }
     }
 

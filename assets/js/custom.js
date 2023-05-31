@@ -115,6 +115,16 @@ jQuery(document).ready(function(){
             email: { required: "Enter your Email", email: "Please enter valid email address" },
         }
     });
+
+    var form = $('#contactForm');
+    form.addClass('hide');
+    var h2 = $('.form h2');
+    h2.addClass('show');
+    setTimeout(function() {
+        form.removeClass('hide');
+        h2.addClass('hide');
+        h2.removeClass('show');
+    }, 5000);
     /**** Humburger Menu****/
     $('a.scroll-nav[href^=#]')
     .bind('click.smoothScroll', function(event) {
