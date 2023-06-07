@@ -23,7 +23,9 @@ svg .Malaysia,
 svg #TH,
 svg .Indonesia,
 svg #SO,
-svg #PK {
+svg #PK,
+svg #SD,
+svg #VN {
   fill: #FFBE00;
   stroke-width: 1;
 }
@@ -38,7 +40,9 @@ svg .Malaysia:hover,
 svg #TH:hover,
 svg .Indonesia:hover,
 svg #SO:hover,
-svg #PK:hover {
+svg #PK:hover,
+svg #SD:hover,
+svg #VN:hover {
   fill: #18352D;
   stroke-width: 1;
 }
