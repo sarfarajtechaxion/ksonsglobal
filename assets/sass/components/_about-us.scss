@@ -1,0 +1,38 @@
+/******** About us Section ********/
+.about-us {
+    background: $white_color;    
+    .about-us-wrapper {
+        @include flexbox;
+        @include align-item-center;
+        flex-direction: column-reverse;
+        @media only screen and (min-width: $device-md) {
+            @include flexrow;
+            @include space-between;
+        }
+        .content {
+            max-width: 710px;
+            @media only screen and (min-width: $device-md) {                
+                max-width: 410px;
+            }
+            @media only screen and (min-width: $device-lg) {
+                max-width: 560px;
+            }
+            @media only screen and (min-width: $device-xl) {                
+                max-width: 710px;
+            }
+            a {
+                font-weight: 700;
+            }
+            h3 {
+                margin-top: 20px;
+                @media only screen and (min-width: $device-md) {
+                    margin-top: 0;
+                }
+            }
+        }
+        .video {
+            max-width: 400px;
+            width: 100%;
+        }     
+    }
+}

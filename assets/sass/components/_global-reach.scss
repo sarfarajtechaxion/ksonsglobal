@@ -1,0 +1,44 @@
+/******** Global Reach Section ********/
+.global-reach {
+    background-color: $white_color;
+    margin: 0;  
+    .map-image {
+        margin-bottom: 20px;
+        svg {
+            @media only screen and (min-width: $device-lg)  {
+                height: 650px;
+            }
+            @media only screen and (min-width: $device-xl)  {
+                height: 650px;
+            }
+        }
+    }
+    ul.country-list {
+        max-width: 260px;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        margin: 0 0 0 auto;
+        @media only screen and (min-width: $device-sm) {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        @media only screen and (min-width: $device-md) {
+            max-width: 650px;
+            columns: 4;
+            -webkit-columns: 4;
+            -moz-columns: 4;
+        }
+        @media only screen and (min-width: $device-lg) {
+            max-width: 700px;
+        }
+        li {
+            margin-bottom: 5px;
+            list-style-type: circle;
+            color: $site_secondary_color;
+            a {
+                font-weight: 600;
+            }
+        }
+    }
+}

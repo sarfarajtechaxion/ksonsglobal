@@ -81,7 +81,9 @@
                         <div class="about-us-wrapper">
                             <div class="content">
                                 <h3>About <span>us</span></h3>
-                                <p>KSONS Global Commodities has established itself as one of the most reputed Agro Products offering platforms, a credibility built on the Trust of Delivering ” ONLY THE BEST”. This has been possible only due to our deep- rooted understanding of the Agro- Industry and the ever changing Global Markets. Ability to trade any volume of goods in Bulk Vessel, Break Bulk and by Container, anywhere, anytime fortifies our strength.</p>
+                                <p>Ksons Commodities is a dynamic, young International Organization specializing in Agro-Commodity Value Chain. We bring along, expertise and exposure inherited from generations in sourcing and supply of Commodities from across the globe.
+                                Our company is based in Dubai, UAE, and registered under Dubai Multi Commodities Centre Authority, a novel initiative by the Government of Dubai to create a Global Centre of Excellence in Commodities business.
+                                Ksons Commodities is engaged in origination and trading in Grains, Rice, Sugar, Animal Feed & Meals, Spices, Cotton etc. With seamless knowledge flow and price aggression, we have gained strong presence in specific origins and markets. We maintain our competitive edge through bonding relationships and reach by continuously creating Value additions and offering cost effective solutions to Suppliers and Clients alike.</p>
                             </div>
                             <div class="video">                                                                    
                                 <iframe width="100%" height="250px" src="https://www.youtube-nocookie.com/embed/nziA33FrhoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -1530,5 +1532,42 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- jQuery Validation-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>    
+    <script>
+       $(document).ready(function() {
+           // Read More / Read Less                 
+           var showChar = 250;  // How many characters are shown by default
+           var ellipsestext = "";
+           var moretext = "... Read More";
+           var lesstext = "Read Less";
+           
+           $('.content p').each(function() {
+               var content = $(this).html();
+       
+               if(content.length > showChar) {
+       
+                   var c = content.substr(0, showChar);
+                   var h = content.substr(showChar, content.length - showChar);
+       
+                   var html = c + '<span class="moreellipses">' + ellipsestext+ '</span><span class="morecontent"><span>' + h + '</span> <a href="" class="morelink">' + moretext + '</a></span>';
+       
+                   $(this).html(html);
+               }
+       
+           });
+           $('.content .morecontent span').hide();
+           $(".morelink").click(function(){
+                   if($(this).hasClass("less")) {                       
+                       $(this).removeClass('less');
+                       $(this).html(moretext);
+                   } else {                       
+                       $(this).addClass('less');
+                       $(this).html(lesstext);
+                   }
+                   $(this).parent().prev().toggle();   
+                   $(this).prev().toggle();
+                   return false;
+               });
+       });
+   </script>
 </body>
 </html>

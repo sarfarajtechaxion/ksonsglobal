@@ -1,0 +1,65 @@
+/******** Our Product Section ********/
+.our-product {
+    .our-product-wrapper {
+        position: relative;
+    }    
+    .product-list {
+        @include flexbox;
+        flex-wrap: wrap;
+        max-width: 100%;
+        position: unset;        
+        li {
+            padding:  0 10px;
+            width: 33.33%;
+        }
+        .image {
+            position: relative;
+            padding: 40% 50%;  
+            @media only screen and (min-width: $device-md) {
+                padding: 60% 40%;  
+            }          
+            .blog-title {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                background: rgba(0,0,0,0.5);                
+                padding: 10px;
+                color: $white_color;
+            }
+            img {
+                position: absolute;
+                inset: 0;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;                
+            }
+        }        
+    }
+    .slick-arrow {
+        background: url(../../images/home/arrow.svg) no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;        
+        top: 60%;
+        cursor: pointer;
+        z-index: 1;
+        @media only screen and (min-width: $device-md) {
+            top: 40%;
+        }
+        @media only screen and (min-width: $device-lg) {            
+            top: 50%;
+        }
+    }
+    .arrow-left.slick-arrow {
+        left: -30px;
+        transform: rotate(180deg);        
+    }
+    .arrow-right.slick-arrow {        
+        right: -30px;
+        transform: rotate(360deg);        
+    }
+}

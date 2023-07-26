@@ -1,21 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
-h3 {
-  font-weight: 900;
-  margin: 0 0 20px;
-  color: #18352D;
-  text-transform: capitalize;
-}
-
-h3 span {
-  color: #FFBE00;
-}
-
-h6 {
-  font-weight: 600;
-  color: #002043;
-  margin: 0;
-}
-
 /******** Banner Section ********/
 .banner {
   background: #18352D;
@@ -122,6 +105,78 @@ h6 {
   }
 }
 
+/******** About us Section ********/
+.about-us {
+  background: #FFFFFF;
+}
+
+.about-us .about-us-wrapper {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us .about-us-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.about-us .about-us-wrapper .content {
+  max-width: 710px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us .about-us-wrapper .content {
+    max-width: 410px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-us .about-us-wrapper .content {
+    max-width: 560px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-us .about-us-wrapper .content {
+    max-width: 710px;
+  }
+}
+
+.about-us .about-us-wrapper .content a {
+  font-weight: 700;
+}
+
+.about-us .about-us-wrapper .content h3 {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-us .about-us-wrapper .content h3 {
+    margin-top: 0;
+  }
+}
+
+.about-us .about-us-wrapper .video {
+  max-width: 400px;
+  width: 100%;
+}
+
 /******** Our Product Section ********/
 .our-product .our-product-wrapper {
   position: relative;
@@ -208,78 +263,6 @@ h6 {
   right: -30px;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-}
-
-/******** About us Section ********/
-.about-us {
-  background: #FFFFFF;
-}
-
-.about-us .about-us-wrapper {
-  display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-@media only screen and (min-width: 768px) {
-  .about-us .about-us-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.about-us .about-us-wrapper .content {
-  max-width: 710px;
-}
-
-@media only screen and (min-width: 768px) {
-  .about-us .about-us-wrapper .content {
-    max-width: 410px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .about-us .about-us-wrapper .content {
-    max-width: 560px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .about-us .about-us-wrapper .content {
-    max-width: 710px;
-  }
-}
-
-.about-us .about-us-wrapper .content a {
-  font-weight: 700;
-}
-
-.about-us .about-us-wrapper .content h3 {
-  margin-top: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .about-us .about-us-wrapper .content h3 {
-    margin-top: 0;
-  }
-}
-
-.about-us .about-us-wrapper .video {
-  max-width: 400px;
-  width: 100%;
 }
 
 /******** Our Service Section ********/
@@ -838,6 +821,23 @@ h6 {
 
 .global-reach ul.country-list li a {
   font-weight: 600;
+}
+
+h3 {
+  font-weight: 900;
+  margin: 0 0 20px;
+  color: #18352D;
+  text-transform: capitalize;
+}
+
+h3 span {
+  color: #FFBE00;
+}
+
+h6 {
+  font-weight: 600;
+  color: #002043;
+  margin: 0;
 }
 
 @-webkit-keyframes blinker {

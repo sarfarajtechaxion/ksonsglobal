@@ -1,0 +1,35 @@
+/******** Our Service Section ********/
+.our-service {
+    background-color: $white_color;
+}
+.our-service-wrapper {    
+    margin-bottom: 20px;       
+    a {
+        font-weight: 700;
+    }
+}
+.services-list {
+    @include flex-center;        
+    text-align: center;
+    flex-wrap: wrap;
+    li {
+        width: 50%;
+        margin-bottom: 25px;
+        @media only screen and (min-width: $device-lg) {
+            width: 33.33%;
+        }
+        @media only screen and (min-width: $device-lg) {
+            width: 25%;
+            margin-bottom: 0;
+        }
+    }
+    img {
+        width: 100px;
+        margin: 0 auto 10px;
+        text-align: center;
+        display: block;
+    }
+    h5 {
+        margin: 0;
+    }    
+}

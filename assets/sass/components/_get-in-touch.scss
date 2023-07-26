@@ -1,0 +1,136 @@
+/******** Get in Touch Section ********/
+
+.get-in-touch {    
+    .hide {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    h2 {
+        @include text-center;
+        color: $site_primary_color;
+        margin: 0;
+    }
+    .blink_me {
+        animation: blinker 2s linear infinite;
+    }
+      
+    p {
+        margin-bottom: 20px;
+        @media only screen and (min-width: $device-md) {
+            margin-bottom: 50px;    
+        }        
+    }
+    .form-wrapper {
+        @include flexbox;
+        @include space-between;
+        @include flexColumn;
+        @include align-item-center;
+        @media only screen and (min-width: $device-lg) {
+            flex-direction: row;
+        }
+        .image {
+            max-width: 350px;
+            margin: 0 auto 20px;
+            @media only screen and (min-width: $device-lg) {
+                max-width: 500px;
+                margin: unset;
+            }
+        }
+        .form {
+            width: 100%;
+            margin: 0 auto;
+            @media only screen and (min-width: $device-md) {
+                width: calc(100% - 200px);
+                
+            }
+            @media only screen and (min-width: $device-lg) {
+                width: calc(100% - 600px);
+                margin: unset;
+            }
+            .message .icon {
+                top: 15%;
+            }
+            .icon {
+                width: 15px;
+                position: absolute;
+                top: 49%;
+                left: 0;
+                transform: translate(90%,-60%);
+                @media only screen and (min-width: $device-md) {
+                    width: 17px;
+                    transform: translate(100%,-60%);
+                }
+            }
+            .form-group{
+                width: 100%;                
+                margin-bottom: 20px;
+                position: relative;
+                &.two {
+                    width: calc(50% - 7px);
+                    display: inline-block;
+                    margin-right: 10px;
+                    margin-bottom: 20px;
+                    @media only screen and (min-width: $device-md) {
+                        width: calc(50% - 12px);
+                        margin-right: 20px;
+                    }
+                    &:nth-child(2) {
+                        margin-right: 0;
+                    }
+                }
+                input {
+                    height: 40px;
+                    line-height: 40px;
+                    border: 1px solid $site_primary_color;
+                    width: 100%;
+                    padding: 0 10px 0 40px;
+                    @media only screen and (min-width: $device-md) {
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 10px 0 50px;
+                    }                    
+                    &:focus {outline:none;}
+                    &.error {
+                        border: 1px solid #8B0000;
+                    }
+                }
+                textarea {
+                    border: 1px solid $site_primary_color;
+                    width: 100%;
+                    padding: 10px 10px 10px 40px;
+                    @media only screen and (min-width: $device-md) {                     
+                        padding: 10px 10px 10px 50px;
+                    }
+                    &.error {
+                        border: 1px solid #8B0000;
+                    }
+                    &:focus {outline:none;}                    
+                }
+                button {
+                    background: $site_primary_color;
+                    color: $white_color;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 100%;
+                    @include text-center;
+                    @media only screen and (min-width: $device-md) {
+                        height: 50px;
+                        line-height: 50px;                        
+                    }
+                }
+            }
+            label.error {
+                position: absolute;
+                color: #8B0000;
+                left: 0;
+                bottom: -17px;
+                font-size: 11px;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

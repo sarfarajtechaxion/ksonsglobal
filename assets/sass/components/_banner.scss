@@ -1,0 +1,69 @@
+/******** Banner Section ********/
+.banner {    
+    background: $site_primary_color;
+    .banner-wrapper {
+        @include flexbox;
+        @include space-between;        
+        flex-direction: column-reverse;
+        @include align-item-center;
+        @media only screen and (min-width: $device-md) {
+            @include flexrow;
+        }
+        .banner-content {
+            @media only screen and (min-width: $device-md) {
+                max-width: 450px;
+            }
+            @media only screen and (min-width: $device-lg) {
+                max-width: 800px;
+            }
+        }
+        h1 {
+            color: $white_color;
+            margin: 0 0 20px;
+            text-align: center;
+            @media only screen and (min-width: $device-md) {
+                margin: 0 0 30px;
+                text-align: left;
+            }
+        }
+        h3 {
+            color: $white_color;
+            font-weight: 400;
+            margin: 0 0 20px;
+            @include text-center;
+            @media only screen and (min-width: $device-md) {
+                margin: 0 0 40px;
+                text-align: left;
+            }
+        }
+
+        .btn {
+            background: $site_secondary_color;
+            color: $site_primary_color;
+            text-transform: capitalize;
+            margin: 0 auto;
+            @media only screen and (min-width: $device-md) {
+                margin: unset;
+            }
+            &:hover {
+                border: 1px solid $site_secondary_color;
+                background: transparent;
+                color: $site_secondary_color;
+            }
+        }
+
+        .banner-image {
+            position: relative;            
+            max-width: 400px;
+            margin: 0 auto;
+            img {
+                max-width: 300px;
+                margin-bottom: 30px;
+                @media only screen and (min-width: $device-md) {
+                    margin: 0;
+                }
+                
+            }
+        }
+    }
+}

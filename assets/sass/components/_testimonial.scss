@@ -1,0 +1,122 @@
+
+/******** Testimonial Section ********/
+.testimonial-area {    
+    .testimonial-content {
+        margin: 0 -40px;
+        > div {
+            padding: 0 40px;
+            width: calc(50% - 100px);
+            margin: 0 auto;
+        }
+    }
+    .testimonial-content.slick-slider {
+        overflow: hidden;
+        margin: 0 auto;
+        .slick-list.draggable {
+            padding: 30px 15px;            
+            width: 100%;
+        }
+    }
+    .single-testimonial {
+        border: 2px solid $site_secondary_color;
+        text-align: center;
+        @include border-radius(45px);
+        position: relative;
+        z-index: 2;        
+        margin: 0 20px;
+        @media only screen and (min-width: $device-lg) {
+            margin: 0 40px;
+        }   
+        p {
+            font-size: 15px;
+            line-height: 24px;
+            padding: 40px;
+            padding-bottom: 30px;
+            position: relative;
+            z-index: 3;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: -35px;
+            top: -35px;
+            background: url(../../images/home/quote.png) no-repeat #F7F8F8;
+            background-size: 60%;
+            width: 126px;
+            height: 100px;
+            transform: rotate(180deg);
+            background-position: 34px 15px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: -35px;
+            bottom: -34px;
+            background: url(../../images/home/quote.png) no-repeat #F7F8F8;
+            background-size: 60%;
+            width: 126px;
+            height: 100px;
+            background-position: 34px 19px;
+        }        
+        .client-video {
+            padding-right: 15px;
+        }
+        .client-info {
+            position: relative;
+            z-index: 3;
+            @include flexbox;
+            @include align-item-center;
+            @include just-center;
+            text-align: left;
+            padding-bottom: 50px;
+            a {
+                width: 40px;
+                height: 40px;
+                @include border-radius(100px);
+                @include flexbox;
+                @include align-item-center;
+                @include just-center;
+                box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+                font-size: 22px;
+            }
+            h6 {
+                color: $site_text_color;
+                font-weight: 700;
+                font-size: 18px;
+            }
+            span {
+                display: inline-block;
+                font-size: 12px;
+            }
+        }
+    }
+    .slick-dots {
+        @include flexbox;
+        @include just-center;
+        margin: 0;
+        padding: 15px 0;
+        
+        list-style-type: none;
+        
+            li {
+                margin: 0 0.25rem;
+            }
+        
+            button {
+                cursor: pointer;
+                display: block;
+                width: 15px;
+                height: 15px;
+                padding: 0;
+                border: none;
+                @include border-radius(100%);
+                background-color: $site_secondary_color;
+                text-indent: -9999px;
+            }
+        
+            li.slick-active button {
+                background-color: $site_primary_color;
+            }
+        
+    }
+}
