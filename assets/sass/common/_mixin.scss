@@ -1,4 +1,5 @@
 @import "../common/variable";
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 @mixin body-font-style {    
@@ -199,21 +200,16 @@
     @include font-sm;
 }
 
-@mixin h5 {
-    //not available / not in use
+@mixin h5 {    
     @include font-xs;
 }
 
-@mixin h6 {
-    //not available / not in use
+@mixin h6 {    
     @include font-xxs;
 }
 
 @mixin p {
-    @include body-fonts;
-    line-height: 28px;
-    letter-spacing: 0.5px;
-    font-weight: 300;
+    @include body-fonts;    
 }
 
 @mixin row {

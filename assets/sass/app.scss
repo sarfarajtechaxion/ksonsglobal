@@ -14,15 +14,13 @@ body {
     @include body-font-style;
     @include body-fonts;  
     @include space-none;
-    background: #F7F8F8;
-    
+    background: #F7F8F8;    
 }
 
 main,
 section {
     display: block;
 }
-
 
 input,
 textarea,
